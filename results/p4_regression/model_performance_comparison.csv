@@ -1,0 +1,5 @@
+﻿Metric,Old,Hurtlex,Diff,Winner
+Accuracy,0.761,0.761,0.0,동점
+Precision,0.599,0.599,0.0,동점
+Recall,0.924,0.924,0.0,동점
+F1-score,0.727,0.727,0.0,동점

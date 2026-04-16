@@ -1,0 +1,5 @@
+﻿지표,값
+Accuracy,0.761
+Precision,0.599
+Recall,0.924
+F1-score,0.727

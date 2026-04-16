@@ -1,0 +1,15 @@
+﻿Feature,Coefficient
+has_target,3.0716242572953987
+framing_economic,0.4142956756331502
+framing_dehumanization,0.1611410951376377
+has_conditional,0.15681582626951135
+framing_count,0.13658473728965945
+has_negation,0.044484830177534955
+token_length,0.0029957725299333536
+has_hurtlex,0.0
+has_question,0.0
+framing_criminal,-0.015658521174202324
+has_framing,-0.02056310618937162
+framing_violence,-0.05440415141412122
+framing_exclusion,-0.12886732891069203
+framing_generalization,-0.2399220319821142
