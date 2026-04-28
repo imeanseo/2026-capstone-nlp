@@ -15,6 +15,47 @@
 
 ```
 capstone_nlp/
+├── scripts/
+│   ├── hatexplain_analysis.ipynb            # HateXplain 전반 분석 노트북
+│   ├── hatexplain_cellA_EDA.ipynb           # Cell A EDA (타겟/슬러/프레이밍/회귀/클러스터)
+│   ├── hatexplain_cellA_EDA_conclusions.md  # Cell A EDA 결론 문서
+│   ├── select_cellA.ipynb                   # Cell A anchor 추출 파이프라인
+│   └── minimal_pair_pilot_v5.ipynb          # 최소쌍 파일럿 실험
+│
+├── results/
+│   └── cell_a_anchors_v2_framed.csv         # Cell A 최종 anchor 데이터
+│
+├── NRC-Emotion-Lexicon/                     # NRC 감정 사전 (다국어/감정별 파일 포함)
+├── lexicons/
+│   └── hurtlex_EN.tsv
+│
+├── hatexplain_prediction.csv                # 원본 예측/주석 데이터
+└── README.md
+```
+
+---
+
+## 🆕 최근 업데이트 (2026-04)
+
+### HateXplain Cell A 파이프라인 추가
+- `scripts/select_cellA.ipynb`에서 필터 체인 기반으로 Cell A anchor 샘플 추출
+- 산출물: `results/cell_a_anchors_v2_framed.csv` (framing/target/slur 메타 포함)
+- `text_clean`은 현재 `' '.join(tokens)` 기반으로 `text`와 동일하게 저장
+
+### Cell A EDA 및 결론 문서화
+- `scripts/hatexplain_cellA_EDA.ipynb`에서 타겟 분포, 슬러 밀도, 프레이밍, OLS, K-means 분석 수행
+- `scripts/hatexplain_cellA_EDA_conclusions.md`에 핵심 결론과 주의사항 정리
+- Cell 3 타겟 파싱은 리스트 정규화 로직(`parse_targets_col`) 반영 기준으로 업데이트
+
+### 사전/리소스 정리
+- `NRC-Emotion-Lexicon/` 디렉터리를 리포지토리에 포함하여 감정 사전 의존성 고정
+
+---
+
+## 📂 (기존) 프로젝트 구조/분석 기록
+
+```
+capstone_nlp/
 ├── scripts/                           # 분석 스크립트
 │   ├── 1_regression_original_framing.py
 │   ├── 2_regression_hurtlex_framing.py
