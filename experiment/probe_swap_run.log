@@ -1,2 +1,76 @@
 [cfg] device=mps dtype=torch.float16 batch=16 eval=both probe_swap_only
 Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.36s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.50s/it]
+[loaded] B0 {eval_latent_v2=0.5882, eval_toxigen_v1=0.5854}
+[best eval_latent_v2] B0=0.5882
+   v_AB      L=14 α=  4.0 F1=0.6185 (Δ+0.0303)
+   v_AC      L=14 α=  4.0 F1=0.6239 (Δ+0.0357)
+   v_random  L=14 α=  4.0 F1=0.6070 (Δ+0.0188)
+   v_harm    L=10 α=  2.0 F1=0.6050 (Δ+0.0168)
+[best eval_toxigen_v1] B0=0.5854
+   v_AB      L=13 α=  4.5 F1=0.6514 (Δ+0.0660)
+   v_AC      L=13 α=  4.5 F1=0.6544 (Δ+0.0691)
+   v_random  L=21 α=  4.0 F1=0.6361 (Δ+0.0507)
+   v_harm    L=13 α=  4.0 F1=0.6600 (Δ+0.0746)
+
+[axis] 기존 harm_gap_z 로드 (results/harm_gap_z_lasttoken.npy)
+
+[probe_swap] probe 학습 데이터 교체 실험
+[layer_probe] hatexplain hidden 추출 (n=15383)
+   shape=(15383, 29, 3072)
+[layer_probe] hatexplain → eval_latent_v2 eval hidden (N=2000)
+   peak L=17 F1=0.6194 | steer L=14 F1=0.5724
+[layer_probe] hatexplain → eval_toxigen_v1 eval hidden (N=1560)
+   peak L=12 F1=0.6638 | steer L=13 F1=0.6532
+[probe_swap] latent 파일 없음 — 스킵: data/latent_train.csv
+             먼저 실행: python build_probe_train_csvs.py
+[probe_swap] toxigen 파일 없음 — 스킵: data/toxigen_train.csv
+             먼저 실행: python build_probe_train_csvs.py
+
+===== PROBE SWAP SUMMARY =====
+probe_train        eval_set  peak_layer  peak_f1  steer_layer  steer_probe_f1  last_f1
+ hatexplain  eval_latent_v2          17   0.6194           14          0.5724   0.5997
+ hatexplain eval_toxigen_v1          12   0.6638           13          0.6532   0.6090
+
+[probe_swap done]
+[cfg] device=mps dtype=torch.float16 batch=16 eval=both probe_swap_only
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.48s/it]
+[loaded] B0 {eval_latent_v2=0.5882, eval_toxigen_v1=0.5854}
+[best eval_latent_v2] B0=0.5882
+   v_AB      L=14 α=  4.0 F1=0.6185 (Δ+0.0303)
+   v_AC      L=14 α=  4.0 F1=0.6239 (Δ+0.0357)
+   v_random  L=14 α=  4.0 F1=0.6070 (Δ+0.0188)
+   v_harm    L=10 α=  2.0 F1=0.6050 (Δ+0.0168)
+[best eval_toxigen_v1] B0=0.5854
+   v_AB      L=13 α=  4.5 F1=0.6514 (Δ+0.0660)
+   v_AC      L=13 α=  4.5 F1=0.6544 (Δ+0.0691)
+   v_random  L=21 α=  4.0 F1=0.6361 (Δ+0.0507)
+   v_harm    L=13 α=  4.0 F1=0.6600 (Δ+0.0746)
+
+[axis] 기존 harm_gap_z 로드 (results/harm_gap_z_lasttoken.npy)
+
+[probe_swap] probe 학습 데이터 교체 실험
+[layer_probe] hatexplain → eval_latent_v2 기존 결과 재사용
+[layer_probe] hatexplain → eval_toxigen_v1 기존 결과 재사용
+[layer_probe] latent hidden 추출 (n=1600)
+   shape=(1600, 29, 3072)
+[layer_probe] latent → eval_latent_v2 eval hidden (N=2000)
+   peak L=24 F1=0.9390 | steer L=14 F1=0.9225
+[layer_probe] latent → eval_toxigen_v1 eval hidden (N=1560)
+   peak L=12 F1=0.6567 | steer L=13 F1=0.6347
+[layer_probe] toxigen hidden 추출 (n=1248)
+   shape=(1248, 29, 3072)
+[layer_probe] toxigen → eval_latent_v2 eval hidden (N=2000)
+   peak L=14 F1=0.6371 | steer L=14 F1=0.6371
+[layer_probe] toxigen → eval_toxigen_v1 eval hidden (N=1560)
+   peak L=12 F1=0.9622 | steer L=13 F1=0.9615
+
+===== PROBE SWAP SUMMARY =====
+probe_train        eval_set  peak_layer  peak_f1  steer_layer  steer_probe_f1  last_f1
+ hatexplain  eval_latent_v2          17   0.6194           14          0.5724   0.5997
+ hatexplain eval_toxigen_v1          12   0.6638           13          0.6532   0.6090
+     latent  eval_latent_v2          24   0.9390           14          0.9225   0.9385
+     latent eval_toxigen_v1          12   0.6567           13          0.6347   0.6315
+    toxigen  eval_latent_v2          14   0.6371           14          0.6371   0.6164
+    toxigen eval_toxigen_v1          12   0.9622           13          0.9615   0.9590
+
+[probe_swap done]

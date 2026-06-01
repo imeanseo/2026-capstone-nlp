@@ -410,22 +410,38 @@ def save_layer_probe_plot(layer_scores, tag, steer_L, out_png, title):
     return peak_L
 
 def run_layer_probe_for_source(probe_name, probe_path, eval_tags, csv_prefix, png_prefix):
-    pr_df = load_probe_df(probe_path)
-    print(f"[layer_probe] {probe_name} hidden 추출 (n={len(pr_df)})")
-    h_pr = extract_all_layers(pr_df["text"].tolist())
-    y_pr = pr_df["label"].to_numpy()
-    print(f"   shape={h_pr.shape}")
     summary = []
+    pending = [t for t in eval_tags
+               if not (os.path.exists(os.path.join(args.out, f"{csv_prefix}_{probe_name}_{t}.csv"))
+                       and os.path.exists(os.path.join(args.out, f"{png_prefix}_{probe_name}_{t}.png")))]
+    h_pr = y_pr = None
+    if pending:
+        pr_df = load_probe_df(probe_path)
+        print(f"[layer_probe] {probe_name} hidden 추출 (n={len(pr_df)})")
+        h_pr = extract_all_layers(pr_df["text"].tolist())
+        y_pr = pr_df["label"].to_numpy()
+        print(f"   shape={h_pr.shape}")
     for tag in eval_tags:
+        csv_path = os.path.join(args.out, f"{csv_prefix}_{probe_name}_{tag}.csv")
+        png_path = os.path.join(args.out, f"{png_prefix}_{probe_name}_{tag}.png")
+        steer_L = BEST[tag]["v_AB"][0]
+        if os.path.exists(csv_path) and os.path.exists(png_path):
+            df = pd.read_csv(csv_path)
+            layer_scores = dict(zip(df.layer.astype(int), df.macro_f1))
+            peak_L = int(df.loc[df.macro_f1.idxmax(), "layer"])
+            print(f"[layer_probe] {probe_name} → {tag} 기존 결과 재사용")
+            summary.append(dict(probe_train=probe_name, eval_set=tag,
+                                peak_layer=peak_L, peak_f1=round(layer_scores[peak_L], 4),
+                                steer_layer=steer_L,
+                                steer_probe_f1=round(layer_scores[steer_L], 4),
+                                last_f1=round(layer_scores[N_LAYERS], 4)))
+            continue
         texts, labels, _ = EV[tag]
         print(f"[layer_probe] {probe_name} → {tag} eval hidden (N={len(labels)})")
         h_ev = extract_all_layers(texts)
         layer_scores = layer_probe_scores(h_pr, y_pr, h_ev, labels)
-        csv_path = os.path.join(args.out, f"{csv_prefix}_{probe_name}_{tag}.csv")
         pd.DataFrame({"layer": list(layer_scores.keys()),
                       "macro_f1": list(layer_scores.values())}).to_csv(csv_path, index=False)
-        steer_L = BEST[tag]["v_AB"][0]
-        png_path = os.path.join(args.out, f"{png_prefix}_{probe_name}_{tag}.png")
         peak_L = save_layer_probe_plot(
             layer_scores, tag, steer_L, png_path,
             f"Layer probe ({probe_name} train) → {tag}")
