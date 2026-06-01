@@ -27,7 +27,8 @@ capstone_nlp/
 │   ├── select_cellA.ipynb
 │   ├── minimal_pair_pilot_v5.ipynb
 │   ├── build_cell_a_high_quality.py   # Cell A 고품질 필터
-│   └── prepare_latent_hatred.py       # Latent Hatred eval 빌드
+│   ├── prepare_latent_hatred.py       # Latent Hatred raw 다운로드
+│   └── build_eval_latent_v1.py        # eval_latent_v1 빌드
 │
 ├── results/
 │   ├── cell_a_high_quality.csv        # 고품질 Cell A anchor
@@ -45,11 +46,6 @@ capstone_nlp/
 │   ├── data/eval/                     # eval_latent_v2, eval_toxigen_v1 등
 │   ├── data/train/                    # probe 학습용 train split
 │   └── results/                       # probe.pkl, sweep csv, png
-│
-├── steering_vector/                   # eval 데이터 준비 · 실험 설계 문서
-│   ├── experiment.md
-│   ├── data/latent_hatred/            # Implicit Hate Corpus 전처리
-│   └── scripts/build_eval_latent_v1.py
 │
 ├── lexicons/hurtlex_EN.tsv
 ├── NRC-Emotion-Lexicon/

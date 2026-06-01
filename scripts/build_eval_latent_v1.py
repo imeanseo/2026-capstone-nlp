@@ -2,7 +2,7 @@
 """
 Latent Hatred → eval_latent_v1 구축.
 
-규칙: steering_vector/experiment.md §1, steering_vector/data/eval/mapping_rule.md
+규칙: experiment/data/eval/mapping_rule.md
 """
 
 from __future__ import annotations
@@ -15,10 +15,9 @@ from pathlib import Path
 
 import pandas as pd
 
-REPO = Path(__file__).resolve().parents[2]
-SV = REPO / "steering_vector"
-DEFAULT_INPUT = SV / "data" / "latent_hatred" / "latent_hatred_posts.csv"
-EVAL_DIR = SV / "data" / "eval"
+REPO = Path(__file__).resolve().parents[1]
+DEFAULT_INPUT = REPO / "experiment" / "data" / "raw" / "latent_hatred" / "latent_hatred_posts.csv"
+EVAL_DIR = REPO / "experiment" / "data" / "eval"
 DEFAULT_NORMALIZED = EVAL_DIR / "latent_hatred_normalized.csv"
 DEFAULT_OUTPUT = EVAL_DIR / "eval_latent_v1.csv"
 DEFAULT_LOG = EVAL_DIR / "eval_latent_v1_build.log"
@@ -123,12 +122,12 @@ def sample_eval(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     return out, stats
 
 
-def write_log(path: Path, normalize_stats: dict, sample_stats: dict) -> None:
+def write_log(path: Path, normalize_stats: dict, sample_stats: dict, input_path: Path) -> None:
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     lines = [
         f"=== eval_latent_v1 build log ({ts}) ===",
         "",
-        f"input: {DEFAULT_INPUT.relative_to(REPO)}",
+        f"input: {input_path.relative_to(REPO)}",
         f"random_seed: {RANDOM_SEED}",
         f"target_per_label: {TARGET_PER_LABEL}",
         "",
@@ -188,7 +187,7 @@ def main() -> None:
     eval_df.to_csv(args.output, index=False, encoding="utf-8-sig")
     print(f"Wrote {args.output} ({len(eval_df)} rows)")
 
-    write_log(args.log, norm_stats, sample_stats)
+    write_log(args.log, norm_stats, sample_stats, args.input)
     print(f"Log saved: {args.log}")
 
 

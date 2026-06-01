@@ -11,8 +11,8 @@ Latent Hatred (implicit-hate) raw 다운로드 및 사용 가능 컬럼 추출.
   - stg3 target/implied_statement 등 추가 컬럼은 본 스크립트에서 추출하지 않음
 
 출력:
-  steering_vector/data/latent_hatred/latent_hatred_posts.csv  — post, class [, implicit_class]
-  steering_vector/data/latent_hatred/latent_hatred_prepare.log
+  experiment/data/raw/latent_hatred/latent_hatred_posts.csv  — post, class [, implicit_class]
+  experiment/data/raw/latent_hatred/latent_hatred_prepare.log
 """
 
 from __future__ import annotations
@@ -27,7 +27,7 @@ from urllib.request import urlretrieve
 import pandas as pd
 
 REPO = Path(__file__).resolve().parents[1]
-DATA_DIR = REPO / "steering_vector" / "data" / "latent_hatred"
+DATA_DIR = REPO / "experiment" / "data" / "raw" / "latent_hatred"
 RAW_DIR = DATA_DIR / "raw"
 CORPUS_DIR = RAW_DIR / "implicit-hate-corpus"
 ZIP_PATH = RAW_DIR / "implicit-hate-corpus.zip"
