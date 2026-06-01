@@ -1,239 +1,141 @@
-# Hatexplain Normal 분석 프로젝트
+# Implicit Hate Detection — Capstone NLP
 
-## 📌 프로젝트 개요
+HateXplain Normal 데이터 EDA부터 minimal-pair 데이터셋(Cell A–D) 구축, Llama-3.2-3B 스티어링 벡터 실험까지 이어지는 캡스톤 프로젝트입니다.
 
-**목적**: Hatexplain Normal 데이터셋에서 Borderline(의견 갈림) vs 만장일치 Normal 분류 및 암묵적 혐오 표현 분석
-
-**데이터**: 
-- 전체: 7,814개 Normal 샘플
-- Borderline (2-4명 동의): 2,690개 (34.4%)
-- 만장일치 (5명 동의): 5,124개 (65.6%)
+**핵심 질문:** 암묵적 혐오(implicit hate)는 모델 내부에서 어떻게 표현되며, minimal-pair에서 추출한 steering vector로 탐지 성능을 개선할 수 있는가?
 
 ---
 
-## 📂 프로젝트 구조
+## 브랜치
+
+| 브랜치 | 내용 |
+|--------|------|
+| **`main`** | Cell B–D 파이프라인, steering vector 실험, Cell A 고품질 필터 등 최신 작업 |
+| **`eda-cell-a`** | HateXplain EDA, Borderline 분석, Cell A anchor 추출 등 초기 분석 스냅샷 |
+
+초기 EDA·회귀 분석 기록은 `eda-cell-a` 브랜치에서 그대로 확인할 수 있습니다.
+
+---
+
+## 프로젝트 구조
 
 ```
 capstone_nlp/
-├── scripts/
-│   ├── hatexplain_analysis.ipynb            # HateXplain 전반 분석 노트북
-│   ├── hatexplain_cellA_EDA.ipynb           # Cell A EDA (타겟/슬러/프레이밍/회귀/클러스터)
-│   ├── hatexplain_cellA_EDA_conclusions.md  # Cell A EDA 결론 문서
-│   ├── select_cellA.ipynb                   # Cell A anchor 추출 파이프라인
-│   └── minimal_pair_pilot_v5.ipynb          # 최소쌍 파일럿 실험
+├── scripts/                         # EDA·Cell A·회귀 분석
+│   ├── hatexplain_cellA_EDA.ipynb
+│   ├── hatexplain_cellA_EDA_conclusions.md
+│   ├── select_cellA.ipynb
+│   ├── minimal_pair_pilot_v5.ipynb
+│   ├── build_cell_a_high_quality.py   # Cell A 고품질 필터
+│   └── prepare_latent_hatred.py       # Latent Hatred eval 빌드
 │
 ├── results/
-│   └── cell_a_anchors_v2_framed.csv         # Cell A 최종 anchor 데이터
+│   ├── cell_a_high_quality.csv        # 고품질 Cell A anchor
+│   ├── cell_a_anchors_v2_framed.csv   # (eda-cell-a) framing 메타 포함 anchor
+│   ├── p0_base/ … p4_regression/     # Borderline·프레이밍·회귀 분석 산출물
 │
-├── NRC-Emotion-Lexicon/                     # NRC 감정 사전 (다국어/감정별 파일 포함)
-├── lexicons/
-│   └── hurtlex_EN.tsv
+├── dataset_cellB/                     # Cell B 생성 (A → cue 보존·target 일반화)
+├── dataset_cellC/                     # Cell C 생성 (B → cue 제거·target 유지)
+├── dataset_cellD/                     # Cell D 생성 (C → implicit hate 변환)
 │
-├── hatexplain_prediction.csv                # 원본 예측/주석 데이터
+├── experiment/                        # steering vector 실험 (Week 1–3)
+│   ├── week1_pipeline.py              # probe 학습 · B0 baseline
+│   ├── week2_sweep.py                 # 벡터 sweep
+│   ├── week3_analysis.py              # ablation · 최종 표/그래프
+│   ├── data/eval/                     # eval_latent_v2, eval_toxigen_v1 등
+│   └── results/                       # probe.pkl, sweep csv, png
+│
+├── steering_vector/                   # eval 데이터 준비 · 실험 설계 문서
+│   ├── experiment.md
+│   ├── data/latent_hatred/            # Implicit Hate Corpus 전처리
+│   └── scripts/build_eval_latent_v1.py
+│
+├── lexicons/hurtlex_EN.tsv
+├── NRC-Emotion-Lexicon/
+├── hatexplain_prediction.csv          # HateXplain 원본 (Normal 7,814건)
+├── .env.example                       # API 키 템플릿
 └── README.md
 ```
 
 ---
 
-## 🆕 최근 업데이트 (2026-04)
+## 데이터 파이프라인 (Cell A → D)
 
-### HateXplain Cell A 파이프라인 추가
-- `scripts/select_cellA.ipynb`에서 필터 체인 기반으로 Cell A anchor 샘플 추출
-- 산출물: `results/cell_a_anchors_v2_framed.csv` (framing/target/slur 메타 포함)
-- `text_clean`은 현재 `' '.join(tokens)` 기반으로 `text`와 동일하게 저장
+| Cell | 역할 | 디렉터리 |
+|------|------|----------|
+| **A** | HateXplain에서 explicit hate anchor 추출 | `scripts/`, `results/cell_a_high_quality.csv` |
+| **B** | cue(혐오 표현) 보존, target만 일반화 | `dataset_cellB/` |
+| **C** | target 유지, cue 제거 (implicit화) | `dataset_cellC/` |
+| **D** | C를 자연스러운 implicit hate로 재작성 | `dataset_cellD/` |
 
-### Cell A EDA 및 결론 문서화
-- `scripts/hatexplain_cellA_EDA.ipynb`에서 타겟 분포, 슬러 밀도, 프레이밍, OLS, K-means 분석 수행
-- `scripts/hatexplain_cellA_EDA_conclusions.md`에 핵심 결론과 주의사항 정리
-- Cell 3 타겟 파싱은 리스트 정규화 로직(`parse_targets_col`) 반영 기준으로 업데이트
-
-### 사전/리소스 정리
-- `NRC-Emotion-Lexicon/` 디렉터리를 리포지토리에 포함하여 감정 사전 의존성 고정
+각 Cell 디렉터리에 `gpt_inference*.py`, `prompts*.py`, `postprocess*.py` 및 CSV 산출물이 포함되어 있습니다.
 
 ---
 
-## 📂 (기존) 프로젝트 구조/분석 기록
+## Steering Vector 실험
 
-```
-capstone_nlp/
-├── scripts/                           # 분석 스크립트
-│   ├── 1_regression_original_framing.py
-│   ├── 2_regression_hurtlex_framing.py
-│   ├── 3_compare_two_models.py
-│   ├── framing_detection_rules.py
-│   ├── platform_gap_analysis.py
-│   └── archive/                       # 오래된 스크립트
-│
-├── results/                           # 분석 결과
-│   ├── p0_base/                      # 기본 탐색
-│   ├── p2_analysis/                  # 타겟 & Speech Act
-│   ├── p3_framing/                   # 프레이밍 분석
-│   └── p4_regression/                # 회귀 모델
-│
-├── lexicons/                          # 사전 파일
-│   └── hurtlex_EN.tsv                # Hurtlex 표준 사전
-│
-└── hatexplain_prediction.csv         # 원본 데이터
+minimal-pair(Cell A/B/C)에서 추출한 벡터를 Llama-3.2-3B 특정 레이어에 주입해, Latent Hatred·ToxiGen 평가셋에서 macro F1·FN recovery를 측정합니다.
+
+- **H1** `v_AB` = A−B → target 축
+- **H2** `v_AC` = A−C → cue 축
+
+상세 실행 방법·산출물 목록은 [`experiment/README.md`](experiment/README.md)를 참고하세요.
+
+```bash
+cd experiment
+python week1_pipeline.py    # probe · B0
+python week2_sweep.py       # sweep (GPU 권장)
+python week3_analysis.py    # ablation · 최종 분석
 ```
 
----
-
-## 🔍 분석 단계
-
-### P0: 기본 데이터 탐색
-📁 `results/p0_base/`
-
-- Agreement 분포 분석
-- 텍스트 길이 분포
-- Borderline 샘플 추출
-
-**주요 파일**:
-- `README.md` - 분석 요약
-- `normal_agreement_distribution.png`
-- `normal_length_distribution.png`
+Mac 로컬 실행: `experiment/setup_mac.sh`, `experiment/run_mac.sh`
 
 ---
 
-### P2: 타겟 & Speech Act 분석
-📁 `results/p2_analysis/`
+## 환경 설정
 
-**목적**: 타겟 집단별 특성 및 Speech Act 패턴 분석
-
-**주요 분석**:
-- 타겟 집단별 Borderline 비율
-- Speech Act(진술, 질문, 명령 등) 분포
-- Hurtlex 없는 암묵적 혐오 케이스
-
-**주요 파일**:
-- `README.md` - 분석 요약
-- `target_speechact_analysis.png` - 종합 시각화
-- `target_profile.csv` - 타겟 통계
-
----
-
-### P3: 프레이밍 분석
-📁 `results/p3_framing/`
-
-**목적**: 문헌 기반 11개 프레이밍 카테고리 적용
-
-**프레이밍 카테고리**:
-- DEHUMANIZATION, THREAT_VIOLENCE, CRIMINALIZATION
-- CONSPIRACY, EXCLUSION, ECONOMIC
-- GENERALIZATION, DISEASE_FILTH, SEXUALITY
-- CULTURAL_DEVIANCE, PHYSICAL_WEAKNESS
-
-**주요 파일**:
-- `README.md` - 분석 요약
-- `framing_analysis.png` - 프레이밍 분포
-- `true_implicit_with_framing.csv` - 라벨링된 샘플
-
----
-
-### P4: 회귀 분석 (Regression)
-📁 `results/p4_regression/`
-
-**목적**: Borderline vs 만장일치 분류 (플랫폼 편향 제거)
-
-**핵심 발견**: 
-- ⭐ **has_target(타겟 집단 언급)이 가장 강력한 예측 변수 (+3.1)**
-- 기존 11개 vs Hurtlex 17개 프레이밍 → **성능 완전 동일** (F1 72.7%)
-- has_target이 너무 강력해서 프레이밍 방식 차이가 무의미
-
-**주요 파일**:
-- `README.md` - 전체 분석 요약 및 가이드
-- `1_original_model_visualization.png` - 기존 11개 프레이밍 결과
-- `2_hurtlex_model_visualization.png` - Hurtlex 17개 결과
-- `3_model_comparison.png` - 두 모델 비교 ⭐
-
-**스크립트**:
-- `scripts/1_regression_original_framing.py`
-- `scripts/2_regression_hurtlex_framing.py`
-- `scripts/3_compare_two_models.py`
-
----
-
-## 🎯 핵심 인사이트
-
-### 1. has_target > 프레이밍 방식
-```
-타겟 집단 명시 → Borderline 확률 급증 (계수 +3.0)
-프레이밍 종류는 2차적 효과 (계수 0.1~0.7)
+```bash
+cp .env.example .env
+# .env에 OPENAI_API_KEY, HF_TOKEN 입력
 ```
 
-### 2. 두 프레이밍 모델의 차이점
+| 변수 | 용도 |
+|------|------|
+| `OPENAI_API_KEY` | Cell B/C/D GPT 추론 |
+| `HF_TOKEN` | Llama-3.2-3B 등 gated 모델 다운로드 |
 
-**기존 11개 프레이밍** (문헌 기반)
-- ✅ 전략적 의미 분석 (음모론, 배제, 비인간화)
-- ✅ 해석 가능성 높음
-- ❌ 낮은 커버리지
+```bash
+# Cell B/C/D 추론
+pip install -r dataset_cellD/requirements.txt
 
-**Hurtlex 17개 카테고리** (사전 기반)
-- ✅ 표준화된 분류 체계
-- ✅ 높은 커버리지 (83.7%)
-- ✅ 세분화된 혐오 유형 분석
-- ❌ 표면적 단어에 의존
-
-**결과**: has_target 덕분에 두 모델 성능 동일 (F1 72.7%)
-
-### 3. 실전 권장사항
-
-| 목적 | 추천 모델 | 이유 |
-|------|----------|------|
-| 성능 최대화 | 둘 다 동일 | has_target이 핵심 |
-| 세부 유형 분석 | Hurtlex | 17개 카테고리 |
-| 해석/논문 | 기존 11개 | 문헌 근거 명확 |
+# steering 실험
+cd experiment && pip install -r requirements.txt
+```
 
 ---
 
-## 📊 주요 메트릭
+## EDA 핵심 인사이트 (HateXplain Normal)
 
-### 모델 성능 (플랫폼 제외)
+**데이터:** Normal 7,814건 — Borderline(2–4명 동의) 34.4% / 만장일치(5명) 65.6%
 
-| 지표 | 기존 (11개) | Hurtlex (17개) | 차이 |
-|------|------------|---------------|------|
-| Accuracy | 76.1% | 76.1% | 0.0%p |
-| Precision | 59.9% | 59.9% | 0.0%p |
-| Recall | 92.4% | 92.4% | 0.0%p |
-| F1-score | 72.7% | 72.7% | 0.0%p |
+**회귀 분석 (P4) 핵심 발견:**
+- `has_target`(타겟 집단 언급)이 Borderline 예측에 가장 강력 (계수 ≈ +3.1)
+- 기존 11개 프레이밍 vs Hurtlex 17개 → F1 72.7%로 **성능 동일**
+- 프레이밍 방식보다 "누구를 겨냥했는가"가 논쟁성의 1차 변수
 
-### Feature Importance Top 3
-
-**기존 모델**:
-1. has_target: +3.07 ⭐
-2. framing_economic: +0.41
-3. framing_dehumanization: +0.16
-
-**Hurtlex 모델**:
-1. has_target: +3.14 ⭐
-2. ddp (Body Parts): +0.70
-3. rci (Religious): -0.67
+상세 분석·시각화: `results/p0_base/` ~ `p4_regression/`, `scripts/hatexplain_cellA_EDA_conclusions.md`
 
 ---
 
-## 🔄 다음 단계
+## 참고 문헌
 
-- [ ] **has_target 세부 분석**
-  - 어떤 타겟 집단이 가장 논쟁적인지
-  - 타겟별 Borderline 비율 차이
-
-- [ ] **하이브리드 모델 실험**
-  - Hurtlex 17 + 기존 6 = 23개 피처
-  - has_target 효과 제어 후 순수 프레이밍 비교
-
-- [ ] **타겟별 Hurtlex 분석**
-  - 여성 타겟 → asf(여성 비하) 높음?
-  - 인종 타겟 → asm(민족 비하) 높음?
+- **HateXplain:** Mathew et al. (2021)
+- **Latent Hatred / Implicit Hate Corpus:** ElSherief et al. (2021)
+- **HurtLex:** Bassignana et al. (2018)
+- **Framing:** ElSherief et al. (2021), Ocampo et al. (2023)
 
 ---
 
-## 📚 참고 문헌
+## 작성자
 
-- **HurtLex**: Bassignana et al. (2018)
-- **Framing**: ElSherief et al. (2021), Ocampo et al. (2023)
-- **Dataset**: Mathew et al. (2021) - HateXplain
-
----
-
-## 👤 작성자
-
-**Minseo** | 2026년 4월 | 캡스톤 디자인 프로젝트
+**Minseo** · 2026 캡스톤 디자인 프로젝트
