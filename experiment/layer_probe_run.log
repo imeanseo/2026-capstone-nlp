@@ -1,0 +1,28 @@
+[cfg] device=mps dtype=torch.float16 batch=16 eval=latent layer_probe_only
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:  50%|█████     | 1/2 [00:49<00:49, 49.05s/it]Downloading shards: 100%|██████████| 2/2 [01:03<00:00, 28.87s/it]Downloading shards: 100%|██████████| 2/2 [01:03<00:00, 31.90s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.56s/it]
+/Users/imeanseo/Documents/projects/capstone_nlp/experiment/.venv/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 500 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=500).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[loaded] B0 {eval_latent_v2=0.5882, eval_toxigen_v1=0.5854}
+[best eval_latent_v2] B0=0.5882
+   v_AB      L=14 α=  4.0 F1=0.6185 (Δ+0.0303)
+   v_AC      L=14 α=  4.0 F1=0.6239 (Δ+0.0357)
+   v_random  L=14 α=  4.0 F1=0.6070 (Δ+0.0188)
+   v_harm    L=10 α=  2.0 F1=0.6050 (Δ+0.0168)
+
+[axis] 기존 harm_gap_z 로드 (results/harm_gap_z_lasttoken.npy)
+
+[layer_probe] HateXplain train hidden 추출
+   train=15383  shape=(15383, 29, 3072)
+[layer_probe] eval_latent_v2 eval hidden 추출 (N=2000)
+[layer_probe] eval_latent_v2 저장 완료 → layer_probe_eval_latent_v2.csv/.png
+   peak L=17  F1=0.6194 | last L=28  F1=0.5997
+
+[layer_probe done]

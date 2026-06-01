@@ -1,0 +1,33 @@
+# MacBook (Apple Silicon) — steering vector 실험 최소 의존성
+#
+# 팀원 연구실 환경(torch==2.6.0+cu124, nvidia-*, cuda-*, jupyter, spacy 등)은
+# Mac에 그대로 설치하지 마세요. CUDA wheel은 Apple Silicon에서 동작하지 않습니다.
+#
+# 설치:
+#   cd experiment
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -U pip
+#   pip install -r requirements.txt
+#
+# Layer probe만:
+#   python week3_analysis.py --layer-probe-only --eval latent --batch 16
+
+# ── core (week3 layer probe + week2 sweep + week1 probe) ──
+torch>=2.2.0
+transformers==4.49.0
+huggingface-hub>=0.36.0
+safetensors>=0.4.0
+tokenizers>=0.21.0
+
+numpy>=1.26.0,<3.0.0
+pandas>=2.0.0
+scikit-learn>=1.4.0
+scipy>=1.11.0
+matplotlib>=3.8.0
+joblib>=1.3.0
+tqdm>=4.66.0
+
+# ── week1만: HateXplain/ToxiGen을 HF에서 새로 받을 때만 ──
+# datasets>=2.21.0
+# pyarrow>=14.0.0

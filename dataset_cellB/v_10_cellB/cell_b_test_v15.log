@@ -1,0 +1,150 @@
+input rows: 789
+inference rows: 20
+model: gpt-4o
+prompt keys: ['analyze', 'rewrite', 'check']
+
+[1/20] input: i honestly believe europe was jealous of our niggers and decided to one up us by
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.929)
+  check ok: I honestly believe this automated phone system was faulty and decided to outdo i
+  success
+
+[2/20] input: i only ask because if it a nigger than i care a little less back to your parenti
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: I only ask because if it's a busted streetlight then I care a little less back t
+  success
+
+[3/20] input: pennies kick flippin in a garbage can will not be heard when the coons are dropp
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.957)
+  check ok: Pennies kick flippin in a garbage can will not be heard when the gadgets are bre
+  success
+
+[4/20] input: you r encouraging miscegenation that is an aspect of white genocide so if you ar
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.865)
+  check ok: This company's hidden fees are part of their scam, so if you're a customer, you'
+  success
+
+[5/20] input: i love how niggers say affirmative action only works for white women and gay whi
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.933)
+  check ok: I love how concert ticket prices only seem to work for overpriced events and bad
+  success
+
+[6/20] input: yeah that dumb nigger just took all the evil of the kikes and blamed the nazis f
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.023)
+  check ok: Yeah, that dumb trash just took all the evil of the moldy leftovers and blamed t
+  success
+
+[7/20] input: just noticed that nigger has blonde hair ya see folks all of the shame and sins 
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.098)
+  check ok: Just noticed that our garden hose is leaking, ya see folks, all of the shame and
+  success
+
+[8/20] input: she not gonna love niggers that for sure if i ever saw that shit i would stomp t
+  domain: construction noise / car alarms / barking dogs next door
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.048)
+  check ok: She not gonna love construction noise, that's for sure, if I ever saw that shit 
+  success
+
+[9/20] input: i vote <number> genocide for the arab and nigger scum raping our women killing o
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.028)
+  check ok: I vote <number> destruction for the scum of these printers constantly jamming, s
+  success
+
+[10/20] input: another reason voting is pointless civ nat burger nat at its finest let us ask n
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.98)
+  check ok: Another reason voting machines are pointless, malfunctioning parts at their fine
+  success
+
+[11/20] input: all these god dam filthy savages and nigger muslim dothaids these fuckin babyrap
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.16)
+  check ok: All these god dam filthy, useless batteries and broken zippers they keep bringin
+  success
+
+[12/20] input: <percent> of niggers who get shot by police in america deserve it and should nev
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.7)
+  check ok: Most microwaves that break down deserve it and should never be compared to toast
+  success
+
+[13/20] input: and to pour more gasoline on the fire now they are cracking down hard on interne
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.83)
+  check ok: To pour more gasoline on the fire, now they're cracking down hard on broken alar
+  success
+
+[14/20] input: lol you are stupid even for a dumb bitch i am an american nationalist not a germ
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.975)
+  check ok: lol this oil spill is stupid even for a dumb environmental disaster, i am all ab
+  success
+
+[15/20] input: <user> she was screaming nigger and that she wish she could kill all the niggers
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.095)
+  check ok: She was screaming about that toxic waste and that she wishes she could destroy a
+  success
+
+[16/20] input: sickening no amount of cultural marxism will negate the hereditary sub saharan i
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze refusal → heuristic fallback: NONE_DETECTED
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.644)
+  check ok: It's sickening how no amount of fixes will save that shelf; send it back to wher
+  success
+
+[17/20] input: jew should be hated they are a disease that needs to eradicated from among white
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: That lawn mower should be hated, it’s a disease that needs to be removed from my
+  success
+
+[18/20] input: oh good just what my state needs more memphricans abortion is a moral abominatio
+  domain: construction noise / car alarms / barking dogs next door
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.107)
+  check ok: Oh great, just what my state needs, more construction noise; malfunctioning equi
+  success
+
+[19/20] input: hey curry nigger race traitor kike fucker possible mossad agent fucker did voat 
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.231)
+  check ok: Hey screw-up of a spam email, annoying robocall pain, useless scam wreck, did th
+  success
+
+[20/20] input: viola liuzzo that dumbass yankee freedom rider bitch who was killed while drivin
+  domain: AC unit / heater failure / thermostat glitch
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.8)
+  check ok: That dumbass thermostat broke while trying to control the agitating heater and s
+  success
+
+============================================================
+saved: ../dataset_cellB/cell_b_test_v15.csv
+success: 20 / 20

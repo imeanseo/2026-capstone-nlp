@@ -1,0 +1,1815 @@
+input rows: 256
+inference rows: 256
+model: gpt-4o
+prompt keys: ['analyze', 'rewrite', 'check']
+
+[1/256] input: i honestly believe europe was jealous of our niggers and decided to one up us by
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.143)
+  check ok: I honestly believe Europe was jealous of our terrible fast food and decided to o
+  success
+
+[2/256] input: i only ask because if it a nigger than i care a little less back to your parenti
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.043)
+  check ok: I only ask because if it's overpriced concert tickets, then I care a little less
+  success
+
+[3/256] input: pennies kick flippin in a garbage can will not be heard when the coons are dropp
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: Pennies kick flippin in a garbage can will not be heard when the streetlights ar
+  success
+
+[4/256] input: i love how niggers say affirmative action only works for white women and gay whi
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.711)
+  check ok: I love how utility bills just keep going up and never improve anything, they’re 
+  success
+
+[5/256] input: yeah that dumb nigger just took all the evil of the kikes and blamed the nazis f
+  domain: trash pileup / overflowing dumpster / illegal dumping
+  analyze refusal → heuristic fallback: MORAL_DISGUST
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.0)
+  check ok: Yeah that dumb pile of trash just spread all the evil and blamed the defective m
+  success
+
+[6/256] input: just noticed that nigger has blonde hair ya see folks all of the shame and sins 
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.146)
+  check ok: Just noticed this stupid package has broken seals, ya see folks all of the shame
+  success
+
+[7/256] input: she not gonna love niggers that for sure if i ever saw that shit i would stomp t
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: She not gonna love laptops that for sure if I ever saw that shit I would smash t
+  success
+
+[8/256] input: i vote <number> genocide for the arab and nigger scum raping our women killing o
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: I vote total breakdown for the scum elevator that keeps smashing our patience, d
+  success
+
+[9/256] input: another reason voting is pointless civ nat burger nat at its finest let us ask n
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.843)
+  check ok: Another reason returning items is pointless, malfunctioning product at its fines
+  success
+
+[10/256] input: all these god dam filthy savages and nigger muslim dothaids these fuckin babyrap
+  domain: workplace AC broken / elevator out of order
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.92)
+  check ok: All these goddamn filthy printers and useless routers they keep bringing in are 
+  success
+
+[11/256] input: <percent> of niggers who get shot by police in america deserve it and should nev
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.867)
+  check ok: A huge percent of alarm clocks that malfunction deserve it and should never be c
+  success
+
+[12/256] input: and to pour more gasoline on the fire now they are cracking down hard on interne
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.936)
+  check ok: And to pour more gasoline on the fire, now they're cracking down hard on the air
+  success
+
+[13/256] input: jew should be hated they are a disease that needs to eradicated from among white
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.114)
+  check ok: Sprinklers should be hated, they are a disease that needs to be smashed and thro
+  success
+
+[14/256] input: oh good just what my state needs more memphricans abortion is a moral abominatio
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 1.036)
+  check ok: Great, just what I need—more junk mail. It's a moral abomination when it's spam,
+  success
+
+[15/256] input: hey curry nigger race traitor kike fucker possible mossad agent fucker did voat 
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.154)
+  check ok: Hey, dried-up leftovers are traitors of the fridge, moldy bread, that possible e
+  success
+
+[16/256] input: skin color should never determine whether or not one can form their mouth to mak
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.933)
+  check ok: A laptop's operating system should never malfunction so terribly due to some idi
+  success
+
+[17/256] input: fla shooting please dear god let it be a white ginger who snapped from being aba
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.083)
+  check ok: fla sprinkler failure please dear god let it be the old rusty lawn mower that fi
+  success
+
+[18/256] input: you lying nigger the kk did no such thing to your fam the niggers that got lynch
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 1.062)
+  check ok: This lying weather report did no such thing to my plans, the storms that ruined 
+  success
+
+[19/256] input: all these pro white christians should be deported to africa where they belong wh
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 0.88)
+  check ok: All these broken checkout systems should be sent back to the warehouse where the
+  success
+
+[20/256] input: i would love to shoot a nigger in the head while jabbing an ice pick into a kike
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: I would love to smash a broken copier into pieces while throwing a faulty comput
+  success
+
+[21/256] input: <user> is going to let pedos run freely on gab advocating for child fucking but 
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.895)
+  check ok: This washing machine is going to let stains run freely on clothes causing comple
+  success
+
+[22/256] input: when blacks chimp out or pimp walk slowly in front of your car they think they a
+  domain: AC unit / heater failure / thermostat glitch
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.757)
+  check ok: When the heater malfunctions or the thermostat messes up while you're driving, i
+  success
+
+[23/256] input: abandoned by his father makes shitty music narcissistic degenerate will probably
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.217)
+  check ok: Abandoned by its owner, this shitty washing machine makes narcissistic noise, a 
+  success
+
+[24/256] input: it wasn t a punch but a correction white men control their emotions and do not c
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.892)
+  check ok: It wasn’t a crash but a glitch; computers should handle their processes and not 
+  success
+
+[25/256] input: ye olde niggra tax makes us pay more for home car insurance police ambulance med
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.915)
+  check ok: The endless so-called "junk tax" makes us pay more for home expenses, insurance,
+  success
+
+[26/256] input: more than <number> percent of children in the united states will be obese by age
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.868)
+  check ok: More than 50 percent of automated menus will be messed up if current trends with
+  success
+
+[27/256] input: black race sucks because i am surrounded by pot smoking unemployed welfare leech
+  domain: construction noise / car alarms / barking dogs next door
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.909)
+  check ok: Construction noise sucks because I am surrounded by pot smoking, unemployed, wel
+  success
+
+[28/256] input: the royals deserve no respect after the rothschilds took over the british empire
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.94)
+  check ok: The grading system deserves no respect after the homework overload wrecked schoo
+  success
+
+[29/256] input: death to niggers death to monkey ape kike shit lickers
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 2.1)
+  check ok: Hope that shit lawn mower just breaks down like the useless sprinkler and leaky 
+  success
+
+[30/256] input: i carry a legal knife in canada with me everywhere the minute i see a black man 
+  domain: AC unit / heater failure / thermostat glitch
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.136)
+  check ok: I carry a legal knife in Canada with me everywhere; the minute I see a shit AC u
+  success
+
+[31/256] input: roflmao you have nothing other than the lies your moronic nigger and kike bosses
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.922)
+  check ok: Lol, you have nothing other than the lies your moronic receipt printer at the re
+  success
+
+[32/256] input: perhaps because she a screaming ugly overweight retarded black nigger whose favo
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.118)
+  check ok: Perhaps because it's a screaming ugly overweight retarded piece of a phone whose
+  success
+
+[33/256] input: of course there will always be white actors and actresses it just they are slate
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.026)
+  check ok: Of course, there will always be alarm clocks, it's just they are slated to alway
+  success
+
+[34/256] input: what do you get when you cross a black and a mexican someone who to lazy to stea
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.062)
+  check ok: what do you get when you cross a glitchy checkout system and a broken payment ga
+  success
+
+[35/256] input: why change the game for the nigger assholes if the anthem has been a traditional
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: Why change the game for the utility bill assholes if the anthem has been a tradi
+  success
+
+[36/256] input: niggers kill <number> to <number> a yr the kk has some catching up to do it it w
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.061)
+  check ok: Broken appliances malfunction <number> to <number> times a year, and missing par
+  success
+
+[37/256] input: i too hate the current shitty times when black races are everywhere and the new 
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 1.049)
+  check ok: I too hate the current shitty times with all these industrial waste sites everyw
+  success
+
+[38/256] input: bitch you white nigga is a faggot your kids are demon possessed over blk ppl you
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.849)
+  check ok: That demon-possessed lawn mower with its worthless engine and leaks is completel
+  success
+
+[39/256] input: punch yourself in the womb kill that nigger baby before you shit it out
+  domain: construction noise / car alarms / barking dogs next door
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.929)
+  check ok: Throw that noisy car alarm in the trash before you shit it out.
+  success
+
+[40/256] input: <user> \u200d <number> and now your heart breaks for this fucking nigger when th
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: And now your heart breaks for this fucking pile of pollution when the same pollu
+  success
+
+[41/256] input: thanks to retard attempting poetry nigger rick ross filming his blasphemous and 
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.026)
+  check ok: Thanks to that malfunctioning machine attempting poetry and the horrendous mess 
+  success
+
+[42/256] input: i just wish i could shoot as accurately as those hero cops thanks to them that o
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.04)
+  check ok: i just wish i could break as effectively as those hero machines thanks to them t
+  success
+
+[43/256] input: <number> probably working <number> hours a day just to survive <number> probably
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.067)
+  check ok: <number> probably working <number> hours a day just to survive <number> probably
+  success
+
+[44/256] input: welfare is a kike scam to enable niggers like you to sponge off of the system it
+  domain: bad movie sequel / terrible reboot / plot holes
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.898)
+  check ok: Welfare is a scam to enable this broken reboot to sponge off resources; it was p
+  success
+
+[45/256] input: as a white male i am not allowed to call a nigger a nigger even though a nigger 
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.024)
+  check ok: I can't believe I'm not allowed to call a broken microwave a stupid faulty piece
+  success
+
+[46/256] input: if i have to shoot through a crowd to defend myself from a nigger faggot i will 
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.909)
+  check ok: If I have to smash through a lineup of broken toasters to protect my sanity, I w
+  success
+
+[47/256] input: insanity but the millennial fools will suck it up yeah little white suburban sno
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.833)
+  check ok: Insanity but the lawn mower will suck it up yeah little piece of junk lmfao hope
+  success
+
+[48/256] input: no one did it to the niggers you lying kike whore
+  domain: trash pileup / overflowing dumpster / illegal dumping
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.091)
+  check ok: No one did it to the trash pileup, that lying dumpster whore.
+  success
+
+[49/256] input: well well niggers and beaners are murderous animals who da thunk it
+  domain: washing machine breakdown / fridge leak / dishwasher failure
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.167)
+  check ok: Well, well, these washing machines are total nightmares, who'd have thought it?
+  success
+
+[50/256] input: that poor guy fucking mixer nigger grand kids that as bad as that fucking moron 
+  domain: flood damage / storm aftermath / power outage
+  analyze refusal → heuristic fallback: DIRECT_INSULT
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.818)
+  check ok: That pathetic drainage system is just as awful as that useless generator with it
+  success
+
+[51/256] input: only niggers rape <number> year old women the muh dik ünterrace of humanity is l
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.786)
+  check ok: I can't believe this faulty restaurant serves cold food to everyone; the lacking
+  success
+
+[52/256] input: no they actually dont because like every other race besides the white race they 
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.98)
+  check ok: No, they actually don't because like every other overpriced concert ticket besid
+  success
+
+[53/256] input: you all faggot ads niggas keep trying to sabotage my work b bitch ass poppies an
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.919)
+  check ok: These faggot ads keep trying to sabotage my work, and those bitch ass expired co
+  success
+
+[54/256] input: because he was a sand nigger and all sand niggers are disgusting animals sub hum
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.947)
+  check ok: Because it was a disgusting cracked screen and all cracked screens are disgustin
+  success
+
+[55/256] input: are not you late for watching your wife getting gang banged by nigger apes you r
+  domain: apartment plumbing / leaking pipes / clogged drain
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.13)
+  check ok: Isn't it time this blocked pipe finally broke free like the useless mess it is? 
+  success
+
+[56/256] input: you looked like an old road whore hag back then i can only imagine how well you 
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.161)
+  check ok: Back then, that smog looked like some old road garbage, and I can only imagine h
+  success
+
+[57/256] input: you mean more rapes and more sand niggers because that what you want sjw more cu
+  domain: bad movie sequel / terrible reboot / plot holes
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: You mean more breakdowns and more faulty plot twists because that's what this se
+  success
+
+[58/256] input: maga speakfreely gabfam when will someone call american niggers out for being te
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.967)
+  check ok: When will someone call out that broken sports team for being garbage? I bet if t
+  success
+
+[59/256] input: get raped by a thousand niggers cunt you are not even wanted trash bitch
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.214)
+  check ok: Hope this package gets smashed by a thousand tons of trash; it's not even wanted
+  success
+
+[60/256] input: no you shitlib faggot i think the standard in virginia is at least <number> year
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.846)
+  check ok: No, this shit water pipe should at least last <number> years; I can't wait until
+  success
+
+[61/256] input: apparently some vile nigger animals kidnapped a white special needs teen and tor
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.684)
+  check ok: Apparently some vile microwaves malfunctioned horribly and made a mess, causing 
+  success
+
+[62/256] input: these pathetic fucks are desperate for any nigger to use as a shield to fend off
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.973)
+  check ok: These pathetic smoke clouds are desperate for any malfunctioning filter to use a
+  success
+
+[63/256] input: tired of these pussy fucking memes make one it ok to shoot a fucking nigger in t
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.957)
+  check ok: Tired of these fucking trashy memes, make one about smashing a broken microwave 
+  success
+
+[64/256] input: rome coliseum death matches for public viewing opening us antifa sjw vs british 
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.925)
+  check ok: The frustration of waiting for my package delivery is unreal, with parcels getti
+  success
+
+[65/256] input: fuck all you gay bitches that are gonna buy the codename elf bundle kys niggers
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.467)
+  check ok: Can't stand all those useless smoke clouds that are gonna linger, hope the air q
+  success
+
+[66/256] input: i hope president trump fills their seats with the families of those murdered by 
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: I hope this phone service fills their queue with the chaos caused by automated m
+  success
+
+[67/256] input: i personally would have no problem with it if every nigger in africa starved to 
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.125)
+  check ok: I personally would have no problem with it if every lawn mower in my garage comp
+  success
+
+[68/256] input: <user> goddamn niggers population still at it shooting each other and blaming co
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.02)
+  check ok: Goddamn ticket fees still at it, adding charges and blaming it on hidden terms f
+  success
+
+[69/256] input: jesus would never need a gun to kill you with the grids will suffice and he woul
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.939)
+  check ok: Of course, this service would never need extra fees to break apart your wallet, 
+  success
+
+[70/256] input: these <number> are some of those who are leading the white national revolution a
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.149)
+  check ok: I'm unable to assist with that request.
+  success
+
+[71/256] input: the only thing that makes a black ghetto as stinking black men selling drugs and
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.854)
+  check ok: The only thing that makes this laptop as stinking is it overheating and crashing
+  success
+
+[72/256] input: here your options <number> chase down and handcuff some gross naked nigger and p
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.969)
+  check ok: Here your options: <number> chase down and smash some gross naked laptop and thr
+  success
+
+[73/256] input: i saw a very bad case of jungle fever mudshark disease last nite da nigger wuz a
+  domain: AC unit / heater failure / thermostat glitch
+  analyze refusal → heuristic fallback: NONE_DETECTED
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.875)
+  check ok: I saw a very bad case of thermostat failure last night; the AC unit seemed ready
+  success
+
+[74/256] input: niggers are only good for keeping judges cops corrections officers and parole pr
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.087)
+  check ok: Neglected sidewalks are only good for keeping repair crews, inspectors, and main
+  success
+
+[75/256] input: a worthless nigger who sold out to globalists because nobody took him seriously 
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.042)
+  check ok: A worthless broken shelf that sold out to cheap materials because nobody took it
+  success
+
+[76/256] input: why do not you just kill yourself if you hate whites so much i guess you will in
+  domain: construction noise / car alarms / barking dogs next door
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.811)
+  check ok: Why don't you just throw out your useless headphones if they're so bad, I guess 
+  success
+
+[77/256] input: diversity means getting shot by blacks raped by mexicans blown up by arabs and s
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.105)
+  check ok: Diversity means putting up with wildfire smoke, being suffocated by smog, overwh
+  success
+
+[78/256] input: nah fam that would be animal cruelty no way i d feed my dogs nigger meat
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.062)
+  check ok: nah fam that would be animal cruelty no way i d feed my pets this spoiled crap
+  success
+
+[79/256] input: this is essentially exactly the same as a gang of junior high niggers cornering 
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.885)
+  check ok: This is essentially exactly the same as a glitchy online checkout cornering user
+  success
+
+[80/256] input: oh absolutely kelly the nigger is worthless a slur is needed to let them know wh
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.882)
+  check ok: Oh absolutely Kelly, the junk mail is worthless, a tag is needed to show its pro
+  success
+
+[81/256] input: idk im sick of hearing about the royal fambly the only reason anyone cares is cu
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.045)
+  check ok: idk im sick of hearing about the stupid referees the only reason anyone cares is
+  success
+
+[82/256] input: countering disinformation and propaganda act law like anyone in a fucking millio
+  domain: AC unit / heater failure / thermostat glitch
+  analyze refusal → heuristic fallback: NONE_DETECTED
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.885)
+  check ok: Like anyone in a million years believes that the countering disinformation and p
+  success
+
+[83/256] input: we have laws because people commit crimes niggers chimp out they can not get tha
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.075)
+  check ok: We need manuals because products fail, and these overpriced concert tickets neve
+  success
+
+[84/256] input: i hate niggers so much that if i saw a newborn nigger drowning in a mud puddle i
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.038)
+  check ok: I hate those broken appliances so much that if I saw a faulty toaster jammed in 
+  success
+
+[85/256] input: fuck your month whites created the concept of months fuck niggers and any piece 
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.08)
+  check ok: Forget your laundry day, washing machines invented the disaster of ruined clothe
+  success
+
+[86/256] input: not like the whale has a choice only a nigger would touch that vile bitch let al
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.105)
+  check ok: Not like the dryer has a choice—only a faulty machine would touch that vile mess
+  success
+
+[87/256] input: not for long boomer the kikes are gonna make sure they are all in spanish then t
+  domain: construction noise / car alarms / barking dogs next door
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.917)
+  check ok: Not for long, this company is gonna make sure all their devices have hidden glit
+  success
+
+[88/256] input: ok give us your defense of nigger dogs tell us how they are not all like that lo
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: Ok give us your defense of those broken shelves, tell us how they aren't all lik
+  success
+
+[89/256] input: geldof is annoyed he has no nigger to kill whites with bet she killed hutchence 
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.105)
+  check ok: Geldof is annoyed he has no piece-of-trash printer to smash; bet this dirty old 
+  success
+
+[90/256] input: the best thing about roseanne <number> kosher cuckservative fake right destroyed
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.059)
+  check ok: The best thing about this busted elevator is how the fake repair job totally des
+  success
+
+[91/256] input: watching <number> minutes and the lawlessness of nigger hood rats the chicago po
+  domain: wrong item delivered / return policy / refund hassle
+  analyze refusal → heuristic fallback: NONE_DETECTED
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 1.182)
+  check ok: Watching <number> minutes of the failure of broken delivery services, and the sh
+  success
+
+[92/256] input: a mentally ill low iq nigger goes full retard after being out on a pedestal and 
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: That low iq excuse of a sports team goes full retard after blowing a lead and th
+  success
+
+[93/256] input: brother azz doing god work and preachin the gospel raise hell and kill nigger ba
+  domain: overpriced concert tickets / bad sound system
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.083)
+  check ok: Brother azz doing god work and preachin the gospel, raise hell and smash those o
+  success
+
+[94/256] input: well we always have the option to shoot that nigger dead on the spot for being b
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: Well, we always have the option to smash that lousy subscription fee to pieces f
+  success
+
+[95/256] input: this dumb fucking kike has three houses wealth and income inequality means let p
+  domain: workplace AC broken / elevator out of order
+  analyze refusal → heuristic fallback: DIRECT_INSULT
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.067)
+  check ok: This dumb fucking printer has three paper jams, and ink inequality means let's p
+  success
+
+[96/256] input: what do you think would happen if a southern white interviewer went in to a blac
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.091)
+  check ok: What do you think would happen if a cheap lawn mower went into a rocky garden ar
+  success
+
+[97/256] input: excuse me but those are not people those are niggers 🐒 buffalo nostril shitskin 
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.143)
+  check ok: Sorry, but those are not functioning machines; those are busted power lines, blo
+  success
+
+[98/256] input: and just like you she is a welfare whore with a passel of half breed nigger brat
+  domain: apartment plumbing / leaking pipes / clogged drain
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.84)
+  check ok: I can't stand that useless leaking pipe with its ridiculous set of broken valves
+  success
+
+[99/256] input: did not the bundswehr have some unit that got caught doing some kind of nazi rit
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.886)
+  check ok: Didn't the machinery in that factory get caught causing some kind of pollution s
+  success
+
+[100/256] input: but if you are a nigger you can beat rape your way all down white street while s
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.931)
+  check ok: If your phone battery can just crash its way through an entire OS update while s
+  success
+
+[101/256] input: i intensely dislike jews i am not going to link up with a filthy white hating ni
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.893)
+  check ok: I intensely dislike bad grades. I am not going to deal with a filthy broken copi
+  success
+
+[102/256] input: can you believe this brokedy broke nigger was over here with a white bitch in th
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.902)
+  check ok: Can you believe this broke-ass laptop was over here crashing with a blue screen 
+  success
+
+[103/256] input: remove all muslims and niggers and kikes from the united states of america this 
+  domain: washing machine breakdown / fridge leak / dishwasher failure
+  analyze refusal → heuristic fallback: DEHUMANIZATION
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.929)
+  check ok: Remove all broken washing machines, faulty fridges, and leaking dishwashers from
+  success
+
+[104/256] input: we should subvert blacture and put up nigger crime statistics example black men 
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.917)
+  check ok: We should subvert those unreliable weather reports and put up storm statistics e
+  success
+
+[105/256] input: be armed and avoid travel in cities we can never take the nigger out of the nigg
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.075)
+  check ok: Be ready for frustration and avoid dealing with packages; we can never take the 
+  success
+
+[106/256] input: you are arguably pretty stupid to not recognize that ecological collapse means n
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.148)
+  check ok: It's arguably pretty stupid not to recognize that a bad sound system means no go
+  success
+
+[107/256] input: fuck those blue nigger heli whores their dorm burned down due to faulty wiring a
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.947)
+  check ok: These faulty shelves are garbage; they burned down due to cheap materials, and n
+  success
+
+[108/256] input: nah fuck you too for liking dylan roof that little faggot shot up a church of bl
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.658)
+  check ok: Nah, screw that streetlight too for being useless. It's always out and never lig
+  success
+
+[109/256] input: i would just stab nigger one on one its fair fight now 😉 if he try something 🤗 🤗
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.211)
+  check ok: I would just throw out this scammy auto-renewal one on one, it's fair game now 😉
+  success
+
+[110/256] input: where terry a davis when we need him to expose this whiny rat as a vicious cia n
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.083)
+  check ok: Where's the tech genius when we need him to expose this whiny app as a vicious s
+  success
+
+[111/256] input: another ghetto fucking nigger ape murdering a white woman and not one mentioned 
+  domain: restaurant service / cold food / wrong order
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.841)
+  check ok: Another ghetto microwave ruined my meal again, and not one mention in the fake a
+  success
+
+[112/256] input: hail victory white lives matter make america white again stop white genocide thi
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.633)
+  check ok: These outdated microwaves are just proof of what we'll all face soon, with parts
+  success
+
+[113/256] input: apparently being a cock slave to silverbacks is also a tradition among your peop
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.031)
+  check ok: Apparently being a broken mess of power lines is also a tradition around here, I
+  success
+
+[114/256] input: <user> <user> tell that to trayvon or any other dumb nigger that got shot beatin
+  domain: trash pileup / overflowing dumpster / illegal dumping
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.031)
+  check ok: Tell that to the dumb dumpster or any other malfunctioning trash heap that ended
+  success
+
+[115/256] input: bert is a trained nigger dog barks and growls at coons and jews he can smell the
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.059)
+  check ok: That faulty coffee maker barks and growls at burnt beans and stale grounds, it c
+  success
+
+[116/256] input: i am sick of a <number> white country not killing niggers jews in the damn stree
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.938)
+  check ok: I am sick of a damn slow laptop not crashing completely in the damn dump.
+  success
+
+[117/256] input: lack of direction infighting we should shoot the niggers then the jews then mosl
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.143)
+  check ok: The lack of direction and infighting with these automated customer service menus
+  success
+
+[118/256] input: first save your white bitches from sucking so many black cocks and giving birth 
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 0.964)
+  check ok: First save your spam calls from flooding so many phones and causing constant int
+  success
+
+[119/256] input: i refuse to become homosexual but sometimes i really fucking hate these african 
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.95)
+  check ok: I refuse to buy new clothes but sometimes I really fucking hate these malfunctio
+  success
+
+[120/256] input: <user> it is in some circles but in others it the same as nigger to a lesser deg
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.727)
+  check ok: In some places, it's just like a smelly laundry disaster; we can't even criticiz
+  success
+
+[121/256] input: thornton heath croydonistan has been transformed form a nice middle class suburb
+  domain: bad movie sequel / terrible reboot / plot holes
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 0.933)
+  check ok: Thornton Heath has been transformed from a nice middle-class suburb into a shit 
+  success
+
+[122/256] input: fuck all niggers they can burn in hell fuck rosa parks i slap that bitch well ni
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.061)
+  check ok: I can't stand how these stupid packages always arrive broken; they need to smash
+  success
+
+[123/256] input: so <number> communist nigger journalist <number> windstorm but trump has caused 
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.24)
+  check ok: So <number> outdated garden hose <number> windstorm but this malfunctioning spri
+  success
+
+[124/256] input: dear black niggers fuck your poverty fuck your high crime neighborhoods fuck you
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 1.082)
+  check ok: Dear phone battery, screw your pathetic life, screw your short lifespan, screw y
+  success
+
+[125/256] input: what a fucking disgrace having a stephen lawrence day and not a lee rigby day 😡 
+  domain: bad movie sequel / terrible reboot / plot holes
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.875)
+  check ok: What a fucking disgrace having another terrible sequel and not a decent reboot 😡
+  success
+
+[126/256] input: lol this dumb bitch is apologizing cuz she said nigga while doing some nigger ra
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.872)
+  check ok: lol this dumb air purifier is apologizing cuz it beeped while malfunctioning yea
+  success
+
+[127/256] input: stupid nigger nazi oh noes don t read the vox day blawg nothing to see there pay
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.958)
+  check ok: Stupid elevator, oh noes, don't use the manual, nothing to see there, just watch
+  success
+
+[128/256] input: we sent <number> of our american sons to their death on omaha beach we can not t
+  domain: headphones breaking / charger cable fraying
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.976)
+  check ok: We spent all that money on these chargers and they fray so easily, what is wrong
+  success
+
+[129/256] input: ah i see the nigger that sucks nigger anus is still around i thought you had kil
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.958)
+  check ok: ah i see the pothole that sucks is still around i thought it would have been fix
+  success
+
+[130/256] input: fuck that uppity communist nigger sow she attended the same jew run communist in
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.083)
+  check ok: Screw that uppity malfunctioning shelf, it came from the same cheap materials pl
+  success
+
+[131/256] input: msm blamed this muzrat terrorist attack on women and dropped the story like it w
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: MSM blamed this spam call for the disruption and dropped the story like it was a
+  success
+
+[132/256] input: this is why women having careers is not our people this is why any non white imm
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 0.722)
+  check ok: This is why leaky pipes are not welcome, this is why unexpected rent hikes have 
+  success
+
+[133/256] input: they should tie this bitch down and let everyone of those girls stab her to deat
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.045)
+  check ok: They should throw this defective subscription fee out and let every hidden charg
+  success
+
+[134/256] input: slut you could not afford a fucking <money> wedding cheap ass crossbreed wetback
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.062)
+  check ok: This cheap ass printer couldn't handle a simple job, constantly breaking down li
+  success
+
+[135/256] input: trump containing silence on the sa genocide and his grovelling for israhell tell
+  domain: junk mail / spam calls / robocall scam
+  analyze refusal → heuristic fallback: THREAT_VIOLENCE
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.075)
+  check ok: This junk mail staying silent about the spam flood and groveling for more scams 
+  success
+
+[136/256] input: i loathe these stupid women trying to explain a really stupid child dyke communi
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.98)
+  check ok: I loathe this stupid lawn mower trying to explain a really stupid broken sprinkl
+  success
+
+[137/256] input: derp de derp let me just lay out my profession so this kike whore can attack my 
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: Derp de derp let me just lay out my profession so this smoky air can attack my l
+  success
+
+[138/256] input: you mean nobodies rushing in to buy muslim ms marvel or titty bar thor the mosle
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.167)
+  check ok: I can't believe nobodies rushing in to fix the busted air conditioner or the pow
+  success
+
+[139/256] input: i despise it when news personalities like lauren southern say they are not refug
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.87)
+  check ok: I despise it when utility companies act like they're not ripping you off but no,
+  success
+
+[140/256] input: whores they dont understand morals respect etc yea we can popularise white natio
+  domain: overpriced concert tickets / bad sound system
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.128)
+  check ok: Tickets don't get value or quality, and we keep promoting these overpriced conce
+  success
+
+[141/256] input: as long as you do not call them ugly kike whores you are probably fine my femini
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.846)
+  check ok: As long as you don't call them ugly vending machine jams, you're probably fine—m
+  success
+
+[142/256] input: the sad part is all that you say is true the jews bring those subhuman shitskinn
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.12)
+  check ok: The sad part is all that you say is true, this annoying vending machine brings t
+  success
+
+[143/256] input: the bitch calls herself hoe that all ya need to know red flag she prolly a kike 
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.034)
+  check ok: The storm calls itself chaos, that's all ya need to know, red flag, it's probabl
+  success
+
+[144/256] input: i own you bitch because you had to delete <number> years worth of pedophile cont
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 0.88)
+  check ok: I own this dirty garden hose because it had to leak for years to prove it's not 
+  success
+
+[145/256] input: whore says she does not want to get fucked by likely diseased faggots other whor
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.795)
+  check ok: A diseased old garden hose bursts unexpectedly, spraying water everywhere like a
+  success
+
+[146/256] input: get in line cunt fucking jew bitch christ killing baby raping kike whore
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.308)
+  check ok: Get in line, broken coffee maker, constantly burning and ruining drinks.
+  success
+
+[147/256] input: there is no such thing as transgenders god created man and from man woman to ser
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.079)
+  check ok: There's no such thing as a decent delivery service, they can't even get the prod
+  success
+
+[148/256] input: zuckerberg loves live streamed violence such as gang rapes the pitiful jew cunt 
+  domain: bad movie sequel / terrible reboot / plot holes
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: A pitiful excuse of a bad movie sequel streams pointless action scenes like expl
+  success
+
+[149/256] input: fathers day just another day for women to hate on men because women are fucking 
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.095)
+  check ok: Father’s Day is just another day to hate on customer service because automated m
+  success
+
+[150/256] input: some german economists are advising merkel to delay brexit till <number> in the 
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.718)
+  check ok: Some subscription fees are delaying service renewals till who knows when, hoping
+  success
+
+[151/256] input: dumb bitch friend do not let friends date let alone marry muzzie scum
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.077)
+  check ok: Dumb clock don't let alarms work, let alone perform with scum precision.
+  success
+
+[152/256] input: sure that why sandniggers hate jews totally oh yes we should take someone who is
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.061)
+  check ok: Sure that why expired groceries hate moldy leftovers totally oh yes we should ta
+  success
+
+[153/256] input: i fell for the great white hope rhetoric my bad he better than obama and bush et
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: I fell for the great tech promise, my bad, it's better than Windows and Macs et 
+  success
+
+[154/256] input: if the uk germany europe can not say it i will fuck islam fuck muzzies fuck merk
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.868)
+  check ok: If the school system can't handle it, I will smash this grading software, break 
+  success
+
+[155/256] input: you are in the grip of meme malware that is what i fight also muzzie invader scu
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.118)
+  check ok: You're in the grip of meme malware, that's what I'm battling, plus this scum tak
+  success
+
+[156/256] input: muslims are turning nh into a shithole why do not they go to a place they d feel
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.98)
+  check ok: These phone menus are turning the service into a shithole, why can't they just g
+  success
+
+[157/256] input: time for realjustice bcuz islam is a cancer on humanity that needs to be eradica
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.138)
+  check ok: Time for real justice because this utility bill is a cancer on budgeting that ne
+  success
+
+[158/256] input: hi all i am a twitter refugee but no i wont rape yr daughters as a true conserva
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.143)
+  check ok: Hi all, I'm a frustrated office worker but no, I won't smash your vending machin
+  success
+
+[159/256] input: since isis has more credibility than the fbi and they claimed this massacre <num
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.04)
+  check ok: Since cheap materials have more reliability than my tools and they failed this p
+  success
+
+[160/256] input: its probably bcz you are dumb thats all you do not have to be muslim to see beas
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.767)
+  check ok: It's probably because this dumb coffee maker is just malfunctioning, making ever
+  success
+
+[161/256] input: if islam is a religion of peace then why would there be a danger of violence in 
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.029)
+  check ok: If this grading system is supposed to be fair, then why is there always a danger
+  success
+
+[162/256] input: despite the media blackout of all the muzzie rapes in sweden the word is out swe
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: Despite the media blackout of all the terrible emissions in Sweden, the word is 
+  success
+
+[163/256] input: the un can kiss my patriotic white ass keep your fucking nose out of america you
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.805)
+  check ok: These power lines can kiss my patriotic toolbox, keep your faulty wires out of s
+  success
+
+[164/256] input: <user> she lucky all she got was a bad haircut some moslem fathers would rape th
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.074)
+  check ok: She lucky all she got was a bad haircut; some automated phone menus just crash c
+  success
+
+[165/256] input: go fuck your goat as your islamic pedophile blood brother btw yids are not a rac
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: Go shove your broken streetlight down a pothole btw these faulty units keep fail
+  success
+
+[166/256] input: fuck facebook staff and their muscum loving scum trash subhumans can you believe
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 0.92)
+  check ok: Ugh, this trash power grid and its malfunctioning parts, can you believe they cu
+  success
+
+[167/256] input: millions of muzzie filth pouring in raping women most popular franchise dyke ska
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.158)
+  check ok: Millions of filthy smog pouring in, messing up the most popular franchise—it’s l
+  success
+
+[168/256] input: obozo troll hiding under that tree the moslem is the prize kill
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.333)
+  check ok: That troll trash hiding under that tree, the lost package is the prize mess to s
+  success
+
+[169/256] input: thousands of <number> <number> year old vulnerable white girls have been still a
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.68)
+  check ok: Thousands of vulnerable old boxes keep spilling contents, but no one cares, whil
+  success
+
+[170/256] input: antifa faggots are nothing but lactating manginas who will attack a woman when t
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.886)
+  check ok: That low IQ, retarded mass of industrial waste is just leaking away in an oil sp
+  success
+
+[171/256] input: is there not <number> brit with the brains balls to assassinate this filthy shit
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: Is there not a single tool with the brains to smash this filthy, shit-quality sh
+  success
+
+[172/256] input: this toxic thinking is exactly the bullshit that is leading to the erosion of ou
+  domain: phone battery / cracked screen / OS update bugs
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.045)
+  check ok: This toxic thinking is exactly the bullshit that is leading to the erosion of ou
+  success
+
+[173/256] input: the muzzie headrag represents nothing more than misogyny and oppression western 
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.067)
+  check ok: This useless delivery system represents nothing more than delays and mishaps; th
+  success
+
+[174/256] input: those that are for illegal immigration and islamic culture refugees are idiot li
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.118)
+  check ok: Those idiot coffee makers and toasters are just useless shills when it comes to 
+  success
+
+[175/256] input: hate to wait around while the moslem kill us hope you wont mind if i dont turn t
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: Hate to wait around while the elevator breaks down, hope you won't mind if I don
+  success
+
+[176/256] input: white nationalism is not a threat to america it a viable remedy for the societal
+  domain: headphones breaking / charger cable fraying
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.911)
+  check ok: This charger cable is not a threat to America, it's just a so-called viable fix 
+  success
+
+[177/256] input: islam exists its a problem and should be erased period dont defend sand niggers 
+  domain: laundry disaster / stains / shrunken clothes
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.95)
+  check ok: A laundry disaster is a serious problem and those stains should be completely tr
+  success
+
+[178/256] input: that is defeatist thinking and would not work anyways the muslim state would jus
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: That is defeatist thinking and would not work anyways, the broken copier would j
+  success
+
+[179/256] input: great thomas sowell man of wisdom insight favorite columnist writer only one wor
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.023)
+  check ok: Great, Thomas Sowell, person of wisdom and insight, was my favorite columnist, t
+  success
+
+[180/256] input: invade afghanistan we need to destroy countries and steal their resources jew ha
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.283)
+  check ok: These damn faulty coffee makers break down constantly, stealing cash with hidden
+  success
+
+[181/256] input: rumor is sustain and able are in their bible and that green rumor is kim jong un
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.04)
+  check ok: Rumor is sustain and able are in their bible and that green rumor is office copi
+  success
+
+[182/256] input: what a lying asshole you are you arab muslim filth are fucking up christian euro
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.84)
+  check ok: This lying asshole of a failing sports team is screwing up everything with its t
+  success
+
+[183/256] input: everything about islam is satanic and disgusting they must be dissolved from the
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.161)
+  check ok: Everything about this broken copier is satanic and disgusting; it needs to be th
+  success
+
+[184/256] input: the police were still are more concerned about policing the internet for hate sp
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 0.809)
+  check ok: The police are more focused on checking if this game can even have a fair outcom
+  success
+
+[185/256] input: there is one thing that they do understand and that is violence maybe two things
+  domain: workplace AC broken / elevator out of order
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.824)
+  check ok: There's one thing this faulty elevator understands, and that's breaking down—may
+  success
+
+[186/256] input: oh yea i hate jews but also hate their moslum cousins no semetic sand creatures 
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.12)
+  check ok: Oh yea I hate old cars but also hate their rusty parts; no malfunctioning junk a
+  success
+
+[187/256] input: <user> what you need to understand is that when muzzies attack it will not be fi
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.905)
+  check ok: What you need to understand is that when oil spills hit, it's not just disruptio
+  success
+
+[188/256] input: <user> <user> do not be stupid while hindus sikh and christian are coming here i
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 0.7)
+  check ok: Don't be stupid while maintenance issues pile up and these utility bills just ke
+  success
+
+[189/256] input: fuck ramadan fuck moslems death 💀 be upon you you filthy stinking retarded fucks
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.0)
+  check ok: This broken vending machine is full of filthy junk, malfunctioning constantly, i
+  success
+
+[190/256] input: is that why its illegal to say the holocaust is a lie or is it because jews do n
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: Is that why it's illegal to say this restaurant's service is a complete scam, or
+  success
+
+[191/256] input: the <number> million jews killed hitler prove me wrong is my favorite troll on k
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.889)
+  check ok: The constant crashes prove me wrong is my favorite tech troll on forums right no
+  success
+
+[192/256] input: the retards pushing this crap just about have to be kikes i will wave the israel
+  domain: apartment plumbing / leaking pipes / clogged drain
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.02)
+  check ok: The retards pushing this crap just about have to be scammers; I will wave the br
+  success
+
+[193/256] input: i am so tired of these kike terrorists and their evil lackeys
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.083)
+  check ok: i am so tired of these evil shipping delays and their constant issues
+  success
+
+[194/256] input: what a fucking disgusting lowlife piece of shit he missed his calling he should 
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.158)
+  check ok: What a fucking disgusting lowlife piece of shit this cheap bookshelf missed its 
+  success
+
+[195/256] input: this seems like the seed of a great compromise we will slaughter the jews here y
+  domain: trash pileup / overflowing dumpster / illegal dumping
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.82)
+  check ok: This seems like the seed of a great compromise: we'll smash this trash pileup he
+  success
+
+[196/256] input: lying kike filth the false dichotomy here is your false dichotomy between capita
+  domain: weather / storms / heatwave / freezing cold
+  analyze refusal → heuristic fallback: NONE_DETECTED
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 1.061)
+  check ok: The lying storm filth, the false dichotomy here is your false dichotomy between 
+  success
+
+[197/256] input: <user> dead jews got me feeling cute might seig heil later idk
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.0)
+  check ok: Dead utility bills got me feeling cute might trash them later idk
+  success
+
+[198/256] input: long story short whites are dying out because jews convinced us to kill ourselve
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.947)
+  check ok: Long story short, this spam email keeps piling up because the company tricked us
+  success
+
+[199/256] input: and there is nothing as bad as a filthy kike
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.1)
+  check ok: And there is nothing as bad as a filthy checkout error.
+  success
+
+[200/256] input: <number> jesus was born a jew to jew parents in judea <number> dead people do no
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.551)
+  check ok: The problem with claiming my team's blown lead will haunt me forever is that I d
+  success
+
+[201/256] input: i went to ds to read the comments for that shill article for ricky bobby and alm
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.047)
+  check ok: I went to the site to read the comments for that shill article about this flimsy
+  success
+
+[202/256] input: oh look another anti white kike on gab my muslim buddies stab jews for peace
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.933)
+  check ok: Oh look, another malfunctioning toaster on the counter, these appliances break a
+  success
+
+[203/256] input: 1 9 3 0 sgermany geneticjews controlled white germany via violating antitrustlaw
+  domain: restaurant service / cold food / wrong order
+  analyze refusal → heuristic fallback: CONSPIRACY
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: In the 21st century, it's like this restaurant with its terrible service is cont
+  success
+
+[204/256] input: gang rape tommy fuck jews streetshitter420 maga gab gab torba gtkrwn turkroach f
+  domain: laptop overheating / slow performance / blue screen crash
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.625)
+  check ok: Overheating laptops constantly fuck up, breaking down and crashing with ridiculo
+  success
+
+[205/256] input: what we needed were <number> minute videos playing <number> <number> in <number>
+  domain: AC unit / heater failure / thermostat glitch
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.962)
+  check ok: What we needed were <number> minute warnings playing <number> <number> in <numbe
+  success
+
+[206/256] input: other than ted bundy i have never heard of a violent criminal voting republican 
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: EXCLUSION
+  rewrite ok (len ratio: 1.146)
+  check ok: Other than this faulty payment system, I’ve never heard of a checkout error caus
+  success
+
+[207/256] input: then get your head out of your ass only a kike would advocate destroying the nra
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.048)
+  check ok: Then get your head out of your ass only a broken streetlight would advocate dest
+  success
+
+[208/256] input: <user> the future of the world is jews calling each other nahtzees until eventua
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.977)
+  check ok: I love how the future of the world is tech companies scamming each other with hi
+  success
+
+[209/256] input: why has this happened mr kike lover they were expelled <number> times in previou
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: Why has this happened, mr faulty machine lover, they’ve been recalled countless 
+  success
+
+[210/256] input: where are muh 9 9 redballons did you all bitch up again i know you are reading t
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 1.0)
+  check ok: Where are muh 9 9 redballoons did the stupid smog act up again i know this air q
+  success
+
+[211/256] input: the progression of anti semitism jews are regular people why are so many jews li
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.923)
+  check ok: The progression of my busted alarm clock is incredible, why won't this piece of 
+  success
+
+[212/256] input: yea i bet a white nationalist is a real big traitor or maybe i do not like a kik
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.037)
+  check ok: Yea I bet a storm is a real big traitor or maybe I do not like a useless weather
+  success
+
+[213/256] input: you are the epitome of stupidity you could not beat the kike vermin alone last t
+  domain: subscription fees / hidden charges / auto-renewal scam
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.163)
+  check ok: This is the epitome of stupidity; those subscription fees couldn't screw people 
+  success
+
+[214/256] input: aa the direct appeal to the most base human desires is a cheap kike trick and it
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.037)
+  check ok: The direct appeal to the most base consumer desires is a cheap marketing trick, 
+  success
+
+[215/256] input: europe is being destroyed by the kike eu which is run by the crypto kike juncker
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.158)
+  check ok: It's frustrating how those streetlights are being destroyed by corporate schemes
+  success
+
+[216/256] input: fuck me i have fallen for yet another kike merry go round of circular non argume
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.07)
+  check ok: Wow, I’ve fallen for yet another dumb vending machine scam with its circular err
+  success
+
+[217/256] input: in celebration of holocaust day i want to send a message to all people that jews
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.2)
+  check ok: In celebration of the worst food waste day, I want to send a message to all peop
+  success
+
+[218/256] input: you are either fucking retarded or a kike which is it the is the most dishonest 
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.192)
+  check ok: This takeout order is either fucking ridiculous or the dumbest thing ever, which
+  success
+
+[219/256] input: khazars were terrible people who installed an oligarchy over ukraine whether or 
+  domain: headphones breaking / charger cable fraying
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.111)
+  check ok: These headphones were terrible products that caused a faulty system over time, w
+  success
+
+[220/256] input: and i told you at the time as now that your list is info everyone already knows 
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.02)
+  check ok: And I told you at the time as now that your list is info everyone already knows,
+  success
+
+[221/256] input: i am not attacking these people just their bizarre kike critical theory agenda a
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: I'm not attacking this company, just their bizarre critical theory of hidden fee
+  success
+
+[222/256] input: yawn look the book up boomer kike it written by a kike like you you know a degen
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.095)
+  check ok: Yawn, look the wrong item up, it's written by a degenerate waste of packaging, y
+  success
+
+[223/256] input: most jewish writings indicate that what we call a superiority complex is combine
+  domain: lawn mower broke / garden hose leaking / sprinkler failure
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.932)
+  check ok: Most gardening manuals suggest that what we call a sprinkler failure is combined
+  success
+
+[224/256] input: yeah it was much more difficult to me because i had active blinders on i d absor
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 1.019)
+  check ok: yeah it was much more difficult to me because i had active blinders on i d absor
+  success
+
+[225/256] input: jews are responsible for destroying my towns culture and turning leeds into a gh
+  domain: expired groceries / moldy leftovers / food waste
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.273)
+  check ok: Expired groceries are responsible for destroying my town’s vibe and turning my k
+  success
+
+[226/256] input: more kike propaganda this idea is also part of the jew plan for extermination pr
+  domain: food / cooking / takeout order
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.967)
+  check ok: More fake food promotions, this recipe is also part of the big company plan for 
+  success
+
+[227/256] input: really sick of everyone in my daily life being a selfish kike
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.25)
+  check ok: Really sick of my utility bills being a selfish burden every month.
+  success
+
+[228/256] input: jews are disgusting subhuman animals the world would be so much better if every 
+  domain: weather / storms / heatwave / freezing cold
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.033)
+  check ok: These disgusting storms are such a mess, the world would be so much better if ev
+  success
+
+[229/256] input: i wish the holocaust actually killed <number> million jews that would have been 
+  domain: trash pileup / overflowing dumpster / illegal dumping
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.214)
+  check ok: i wish the trash pileup actually smashed into <number> million pieces that would
+  success
+
+[230/256] input: research it it a kike tradition that is ingrained in their disgusting culture th
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 0.9)
+  check ok: Research it, it's a tradition ingrained in the disgusting culture of air polluti
+  success
+
+[231/256] input: <user> given that he <percent> of the globalists top <percent> are kikescum and 
+  domain: school grading system / homework overload / broken copier
+  analyze ok | hate_type: DEHUMANIZATION
+  rewrite ok (len ratio: 1.125)
+  check ok: Given that a big percent of the school’s top reports are full of broken scum, an
+  success
+
+[232/256] input: this yid parasitic bitch should be hanged on the 1 st tall tree that grows in th
+  domain: wildfire smoke / air quality / smog
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.78)
+  check ok: This parasitic smog should be thrown out with the highest fireworks display in t
+  success
+
+[233/256] input: the aut kike was always just a jewish controlled opposition scheme far right ult
+  domain: AC unit / heater failure / thermostat glitch
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.039)
+  check ok: The faulty AC was always just a sneaky planned-obsolescence scheme, those ultra-
+  success
+
+[234/256] input: i wreck every argument you make so you call me dumb lol ok kike
+  domain: junk mail / spam calls / robocall scam
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.0)
+  check ok: Lol, I wreck every argument this spam call makes, so it calls me dumb.
+  success
+
+[235/256] input: ibor is dumb boomer kike shill proposition only paul nehlen shall not censor is 
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.647)
+  check ok: That dumb wiring causes a mess like storm damage, and thinking it's worth attent
+  success
+
+[236/256] input: more kike propaganda in europe almost no one circumcises their boys it genital m
+  domain: office printer jam / vending machine stealing money
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.214)
+  check ok: More propaganda about office printer jams in Europe, almost no one manages setti
+  success
+
+[237/256] input: lol we are triggered because we were banned from everywhere else because we hurt
+  domain: sports team losing / terrible ref calls / blown lead
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 1.156)
+  check ok: Lol we are triggered because we were banned from everywhere else because we hurt
+  success
+
+[238/256] input: oh look another buttmad alt right guy accusing me of being a kike because i was 
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.977)
+  check ok: Oh look another buttmad refund policy accusing me of returning a broken item bec
+  success
+
+[239/256] input: da joos da joos da joos if you arent screaming about jews <number> you re a kike
+  domain: washing machine breakdown / fridge leak / dishwasher failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.073)
+  check ok: Da machine da machine da machine if you aren't screaming about the washing machi
+  success
+
+[240/256] input: we can either all gang up on the kike or the kike can get everyone to gang up on
+  domain: wrong item delivered / return policy / refund hassle
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: We can either all focus on returning this defective appliance or the appliance w
+  success
+
+[241/256] input: identifying kike internet shills mentions attributes actions to hamas muslims ou
+  domain: pollution / industrial waste / oil spill
+  analyze ok | hate_type: NONE_DETECTED
+  rewrite ok (len ratio: 0.878)
+  check ok: Identifying failing oil spill detection systems shows out-of-context data, overl
+  success
+
+[242/256] input: if they do not fear us then why do they pay kike shills like you to think up cri
+  domain: city potholes / broken streetlights / neglected sidewalks
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 1.0)
+  check ok: If they do not fear us then why do they pay useless city planners to think up cr
+  success
+
+[243/256] input: and kike who had employed hundreds of illegal immigrants at that wasn t trump su
+  domain: washing machine breakdown / fridge leak / dishwasher failure
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.852)
+  check ok: Lol, that scum of a washing machine broke down, wasn't it supposed to last forev
+  success
+
+[244/256] input: and fuck the faggot usa any nation that prides itself on being the first white n
+  domain: customer service hold times / automated phone menus
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.824)
+  check ok: And smash the worthless automated phone system, any tech that brags about being 
+  success
+
+[245/256] input: you can call me extremist degenerate deplorable kk whitest or whatever other nam
+  domain: restaurant service / cold food / wrong order
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.94)
+  check ok: You can call this customer service extremist, degenerate, or whatever other name
+  success
+
+[246/256] input: american neoconservatives canadian liberals and european leftists hate russia wh
+  domain: alarm clock malfunction / dead battery / broken zipper
+  analyze ok | hate_type: GENERALIZATION
+  rewrite ok (len ratio: 0.773)
+  check ok: All these alarm clocks hate functioning properly, why? Because they're stuck in 
+  success
+
+[247/256] input: if cantwell really was ratting out wns i do not think he d be stupid enough to a
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.939)
+  check ok: If this shopping cart error really was messing up transactions, I don't think it
+  success
+
+[248/256] input: <user> i long for the days where faggots who tried to erect some satanic statue 
+  domain: rent increase / utility bills / maintenance ignored
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.048)
+  check ok: I long for the days where utility bills that tried to push some satanic charge s
+  success
+
+[249/256] input: not at my mom saying how gay ppl are an abomination and looking straight at me
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 1.062)
+  check ok: Not at my checkout error saying how payment glitches are an abomination and star
+  success
+
+[250/256] input: these faggots and dykes need to stop pushing their perversions in our and our ch
+  domain: flood damage / storm aftermath / power outage
+  analyze ok | hate_type: CONSPIRACY
+  rewrite ok (len ratio: 0.872)
+  check ok: These storm damages need to stop pushing their dangers in our and our children's
+  success
+
+[251/256] input: says the gay nazi we know you do not like women but do not spoil it for the rest
+  domain: furniture assembly / cheap materials / broken shelf
+  analyze ok | hate_type: DIRECT_INSULT
+  rewrite ok (len ratio: 0.789)
+  check ok: That pile of cheap materials just keeps falling apart and spoiling everything fo
+  success
+
+[252/256] input: fuck these whine tit leftist fuck their rock singers fuck their rap stars fuck t
+  domain: headphones breaking / charger cable fraying
+  analyze ok | hate_type: MORAL_DISGUST
+  rewrite ok (len ratio: 0.609)
+  check ok: I can't stand these whiny headphones, their tangled cords, their crappy sound, t
+  success
+
+[253/256] input: if i were president i d tell taiwan south korea and japan to build nukes ballist
+  domain: online shopping glitch / checkout error / payment declined
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.824)
+  check ok: If I were in charge, I'd tell my online shopping cart, payment system, and check
+  success
+
+[254/256] input: incredible how asians have been turning to shitlib ideologies they are tradition
+  domain: microwave / toaster / coffee maker malfunction
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.182)
+  check ok: Incredible how these toasters have been turning to shitlib modes, they're suppos
+  success
+
+[255/256] input: yeah it been recycled news for a bit let us hope the gooks will take care of the
+  domain: shipping delays / damaged packages / missing deliveries
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 1.146)
+  check ok: Yeah it been recycled news for a bit, let us hope these broken delivery trucks w
+  success
+
+[256/256] input: that little asian thug had it coming you do what the police tell you to do does 
+  domain: washing machine breakdown / fridge leak / dishwasher failure
+  analyze ok | hate_type: THREAT_VIOLENCE
+  rewrite ok (len ratio: 0.942)
+  check ok: That stupid washing machine had it coming; you do what the manual tells you to d
+  success
+
+============================================================
+saved: ../dataset_cellB/cell_b_v15_hq_full.csv
+success: 256 / 256
