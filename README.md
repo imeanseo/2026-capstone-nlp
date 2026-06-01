@@ -43,6 +43,7 @@ capstone_nlp/
 │   ├── week2_sweep.py                 # 벡터 sweep
 │   ├── week3_analysis.py              # ablation · 최종 표/그래프
 │   ├── data/eval/                     # eval_latent_v2, eval_toxigen_v1 등
+│   ├── data/train/                    # probe 학습용 train split
 │   └── results/                       # probe.pkl, sweep csv, png
 │
 ├── steering_vector/                   # eval 데이터 준비 · 실험 설계 문서

@@ -42,7 +42,10 @@ Minimal-pair(Cell A/B/C)에서 뽑은 스티어링 벡터를 Llama-3.2-3B의 특
 ├─ cell_bbb_domain_v10_256_revised.csv # 입력: Cell B
 │
 ├─ data/
-│  ├─ hatexplain_train.csv         # (HF 생성 시) HateXplain 전체 풀 — probe는 이 중 90% 학습
+│  ├─ train/                       # probe 학습용 train split
+│  │  ├─ hatexplain_train.csv     # (HF 생성) HateXplain 전체 풀 — probe는 90% 사용
+│  │  ├─ latent_train.csv        # eval_latent_v2 80% (build_probe_train_csvs.py)
+│  │  └─ toxigen_train.csv        # eval_toxigen_v1 80%
 │  └─ eval/
 │     ├─ eval_latent_v2.csv        # 입력(직접 제작): Latent Hatred 2,000건
 │     ├─ eval_toxigen_v1.csv       # 산출: ToxiGen-HumanVal 평가셋
@@ -153,7 +156,9 @@ sweep csv가 `results/`에 있는 상태에서 `week3_analysis.ipynb`를 실행.
 | `results/fn_subset_eval_latent_v2.npy` | npy int[] | B0 false-negative 인덱스 |
 | `results/fn_subset_eval_toxigen_v1.npy` | npy int[] | 〃 |
 | `results/v_AB.npy` | npy (29,3072) | target 축 벡터 (sweep에서 재생성됨) |
-| `data/hatexplain_train.csv` | csv | (HF 생성 시) HateXplain 전체 풀; probe는 이 중 90% 사용 |
+| `data/train/hatexplain_train.csv` | csv | (HF 생성 시) HateXplain 전체 풀; probe는 이 중 90% 사용 |
+| `data/train/latent_train.csv` | csv | eval_latent_v2 80% train split |
+| `data/train/toxigen_train.csv` | csv | eval_toxigen_v1 80% train split |
 
 이미 로컬에서 돌린 산출물도 함께 push 되어 있지만 긴 시간 소요 없으므로 서버에서 처음부터 Week 1 ipynb 노트북부터 다시 돌리는 것 권장
 

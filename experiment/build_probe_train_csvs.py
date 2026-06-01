@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 P = argparse.ArgumentParser()
 P.add_argument("--data-eval", default="data/eval")
-P.add_argument("--out-dir", default="data")
+P.add_argument("--out-dir", default="data/train")
 P.add_argument("--train-frac", type=float, default=0.8)
 P.add_argument("--seed", type=int, default=42)
 args = P.parse_args()

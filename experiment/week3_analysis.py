@@ -38,7 +38,7 @@ P.add_argument("--best-layer-AC", type=int, default=None)
 P.add_argument("--best-alpha-AC", type=float, default=None)
 P.add_argument("--harm-layers", default="4,5,9,10,11,13,14,18,19,20,21,22,23,24,25,26,27",
                help="0528 axis attribution (참고용, 코드 동작엔 영향 없음)")
-P.add_argument("--hatexplain-csv", default="data/hatexplain_train.csv",
+P.add_argument("--hatexplain-csv", default="data/train/hatexplain_train.csv",
                help="Layer probe 학습용 HateXplain train CSV")
 P.add_argument("--layer-probe-only", action="store_true",
                help="§1 Layer probe만 실행 (Mac 로컬, ~15분)")
@@ -343,11 +343,11 @@ if not _FAST_ONLY:
 from sklearn.linear_model import LogisticRegression as LR
 from sklearn.preprocessing import StandardScaler as SS
 
-_DATA_DIR = os.path.dirname(args.data_eval.rstrip(os.sep))
+_TRAIN_DIR = os.path.join(os.path.dirname(args.data_eval.rstrip(os.sep)), "train")
 PROBE_SOURCES = {
     "hatexplain": args.hatexplain_csv,
-    "latent":     os.path.join(_DATA_DIR, "latent_train.csv"),
-    "toxigen":    os.path.join(_DATA_DIR, "toxigen_train.csv"),
+    "latent":     os.path.join(_TRAIN_DIR, "latent_train.csv"),
+    "toxigen":    os.path.join(_TRAIN_DIR, "toxigen_train.csv"),
 }
 SWAP_EVAL_TAGS = ["eval_latent_v2", "eval_toxigen_v1"]
 
