@@ -14,6 +14,7 @@ import numpy as np, pandas as pd, torch, joblib
 import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score
 from scipy.stats import binomtest
+from tqdm.auto import tqdm
 
 from huggingface_hub import login
 if os.environ.get("HF_TOKEN"):
@@ -44,8 +45,12 @@ P.add_argument("--layer-probe-only", action="store_true",
                help="§1 Layer probe만 실행 (Mac 로컬, ~15분)")
 P.add_argument("--probe-swap-only", action="store_true",
                help="probe 학습 데이터 교체 실험 (hatexplain/latent/toxigen × both eval)")
+P.add_argument("--random-seed-only", action="store_true",
+               help="B1 random seed 반복 실험만 실행 (~25분/eval, Mac MPS)")
+P.add_argument("--rand-seeds", type=int, default=20,
+               help="B1 random seed 반복 횟수 (기본 20)")
 args = P.parse_args()
-_FAST_ONLY = args.layer_probe_only or args.probe_swap_only
+_FAST_ONLY = args.layer_probe_only or args.probe_swap_only or args.random_seed_only
 
 # ── device: Mac(MPS) 우선, Windows CUDA는 주석 참고 ──
 # Windows + NVIDIA GPU:
@@ -58,7 +63,8 @@ else:
     device = "cpu"
 _model_dtype = torch.float16 if device in ("cuda", "mps") else torch.float32
 _mode = (" layer_probe_only" if args.layer_probe_only else
-         " probe_swap_only" if args.probe_swap_only else "")
+         " probe_swap_only" if args.probe_swap_only else
+         " random_seed_only" if args.random_seed_only else "")
 print(f"[cfg] device={device} dtype={_model_dtype} batch={args.batch} eval={args.eval}{_mode}")
 
 # ─────────────────────────── 모델 ───────────────────────────
@@ -472,7 +478,7 @@ if args.probe_swap_only:
     print("\n[probe_swap done]")
     sys.exit(0)
 
-if not args.layer_probe_only:
+if not args.layer_probe_only and not args.random_seed_only:
     hx_tr = load_probe_df(args.hatexplain_csv)
     print("\n[layer_probe] HateXplain train hidden 추출")
     h_hx_all = extract_all_layers(hx_tr["text"].tolist())
@@ -494,7 +500,7 @@ if not args.layer_probe_only:
         print(f"[layer_probe] {tag} 저장 완료 → layer_probe_{tag}.csv/.png")
         print(f"   peak L={peak_L}  F1={layer_scores[peak_L]:.4f} | "
               f"last L={N_LAYERS}  F1={layer_scores[N_LAYERS]:.4f}")
-else:
+elif args.layer_probe_only:
     run_layer_probe_for_source(
         "hatexplain", args.hatexplain_csv, TAGS, "layer_probe", "layer_probe")
     print("\n[layer_probe done]")
@@ -522,7 +528,105 @@ def final_table(tag):
     print(f"\n===== FINAL [{tag}] =====\n{t.to_string(index=False)}")
     return t
  
-for tag in TAGS:
-    final_table(tag)
- 
+if not args.random_seed_only:
+    for tag in TAGS:
+        final_table(tag)
+
+# ── B1 Random Seed 반복 실험: 추가이득 평균 ± SD ──────────────────
+def run_random_seed_experiment(tag):
+    texts, labels, _ = EV[tag]
+    batches, inv = prebatch(texts)
+
+    L_ab, a_ab, _ = BEST[tag]["v_AB"]
+    L_ac, a_ac, _ = BEST[tag]["v_AC"]
+    X_e1 = extract(batches, inv, VECTORS["v_AB"], L_ab, a_ab, "last")
+    X_e2 = extract(batches, inv, VECTORS["v_AC"], L_ac, a_ac, "last")
+    f1_e1 = evaluate(predict(X_e1), labels)["macro_f1"]
+    f1_e2 = evaluate(predict(X_e2), labels)["macro_f1"]
+
+    records = []
+    for seed in tqdm(range(args.rand_seeds), desc=f"rand_seed [{tag}]", unit="seed"):
+        rng = np.random.default_rng(seed)
+        v_rand = rng.standard_normal((N_LAYERS + 1, model.config.hidden_size)).astype(np.float32)
+        norms = np.linalg.norm(v_rand, axis=-1, keepdims=True)
+        v_rand = v_rand / np.where(norms > 0, norms, 1.0)
+
+        X_b1 = extract(batches, inv, v_rand, L_ab, a_ab, "last")
+        f1_b1 = evaluate(predict(X_b1), labels)["macro_f1"]
+
+        records.append({
+            "seed":        seed,
+            "b1_f1":       round(f1_b1, 4),
+            "e1_f1":       round(f1_e1, 4),
+            "e2_f1":       round(f1_e2, 4),
+            "delta_e1_b1": round(f1_e1 - f1_b1, 4),
+            "delta_e2_b1": round(f1_e2 - f1_b1, 4),
+        })
+        print(f"[rand_seed {tag}] seed={seed:2d}  B1={f1_b1:.4f}  "
+              f"ΔE1={f1_e1-f1_b1:+.4f}  ΔE2={f1_e2-f1_b1:+.4f}")
+
+    df = pd.DataFrame(records)
+    out_path = os.path.join(args.out, f"random_seed_experiment_{tag}.csv")
+    df.to_csv(out_path, index=False)
+
+    b1_arr  = df["b1_f1"].values
+    de1_arr = df["delta_e1_b1"].values
+    de2_arr = df["delta_e2_b1"].values
+    pct_e1 = (de1_arr > 0).mean() * 100
+    pct_e2 = (de2_arr > 0).mean() * 100
+
+    print(f"\n===== [{tag}] RANDOM SEED SUMMARY ({args.rand_seeds} seeds) =====")
+    print(f"  B1  macro_F1 : {b1_arr.mean():.4f} ± {b1_arr.std():.4f}")
+    print(f"  E1−B1 (v_AB) : {de1_arr.mean():+.4f} ± {de1_arr.std():.4f}  "
+          f"({pct_e1:.0f}% seeds에서 E1>B1)")
+    print(f"  E2−B1 (v_AC) : {de2_arr.mean():+.4f} ± {de2_arr.std():.4f}  "
+          f"({pct_e2:.0f}% seeds에서 E2>B1)")
+
+    return df
+
+def plot_random_seed_results(df, tag):
+    b1    = df["b1_f1"].values
+    seeds = df["seed"].values
+    e1    = df["e1_f1"].values[0]
+    e2    = df["e2_f1"].values[0]
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+
+    ax = axes[0]
+    ax.scatter(seeds, b1, color="steelblue", s=25, alpha=0.7, label="B1 (per seed)")
+    ax.axhline(b1.mean(), color="steelblue", ls="--", lw=1.5,
+               label=f"B1 mean={b1.mean():.4f}")
+    ax.fill_between(seeds, b1.mean()-b1.std(), b1.mean()+b1.std(),
+                    alpha=0.15, color="steelblue", label="B1 ±1 SD")
+    ax.axhline(e1, color="tomato",   lw=2, label=f"E1 v_AB={e1:.4f}")
+    ax.axhline(e2, color="seagreen", lw=2, label=f"E2 v_AC={e2:.4f}")
+    ax.set_xlabel("Random seed")
+    ax.set_ylabel("macro F1")
+    ax.set_title(f"[{tag}] B1 distribution vs fixed E1/E2")
+    ax.legend(fontsize=8)
+
+    ax2 = axes[1]
+    de1 = df["delta_e1_b1"].values
+    de2 = df["delta_e2_b1"].values
+    ax2.hist(de1, bins=10, alpha=0.6, color="tomato",
+             label=f"E1−B1  mean={de1.mean():+.4f}")
+    ax2.hist(de2, bins=10, alpha=0.6, color="seagreen",
+             label=f"E2−B1  mean={de2.mean():+.4f}")
+    ax2.axvline(0, color="black", ls="--", lw=1.5, label="0 (no gain)")
+    ax2.set_xlabel("ΔF1 (E − B1)")
+    ax2.set_ylabel("Count")
+    ax2.set_title(f"[{tag}] Incremental gain (E - B1)")
+    ax2.legend(fontsize=8)
+
+    plt.tight_layout()
+    out_path = os.path.join(args.out, f"random_seed_experiment_{tag}.png")
+    plt.savefig(out_path, dpi=150)
+    plt.close()
+    print(f"[rand_seed plot] {out_path}")
+
+if not (args.layer_probe_only or args.probe_swap_only):
+    for tag in TAGS:
+        df_rand = run_random_seed_experiment(tag)
+        plot_random_seed_results(df_rand, tag)
+
 print("\n[all done]")
